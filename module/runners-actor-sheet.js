@@ -11,7 +11,7 @@ export class RunnersActorSheet extends RunnersSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor", "pc"],
+  	  classes: ["runners-in-the-shadows", "sheet", "actor", "pc"],
   	  template: "systems/runners-in-the-shadows/templates/actor-sheet.html",
       width: 700,
       height: 970,

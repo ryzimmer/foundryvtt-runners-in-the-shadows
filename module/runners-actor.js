@@ -67,7 +67,7 @@ export class RunnersActor extends Actor {
     let content = `
         <h2>${game.i18n.localize('rits.Roll')} ${game.i18n.localize(attribute_label)}</h2>
         <form>
-          <div Playbook="form-group">
+          <div class="form-group">
             <label>${game.i18n.localize('rits.Modifier')}:</label>
             <select id="mod" name="mod">
               ${this.createListOfDiceMods(-4,+4,0)}
@@ -75,7 +75,7 @@ export class RunnersActor extends Actor {
           </div>`;
     if (RunnersHelpers.isAttributeAction(attribute_name)) {
       content += `
-            <div Playbook="form-group">
+            <div class="form-group">
               <label>${game.i18n.localize('rits.Position')}:</label>
               <select id="pos" name="pos">
                 <option value="controlled">${game.i18n.localize('rits.PositionControlled')}</option>
@@ -83,7 +83,7 @@ export class RunnersActor extends Actor {
                 <option value="desperate">${game.i18n.localize('rits.PositionDesperate')}</option>
               </select>
             </div>
-            <div Playbook="form-group">
+            <div class="form-group">
               <label>${game.i18n.localize('rits.Effect')}:</label>
               <select id="fx" name="fx">
                 <option value="limited">${game.i18n.localize('rits.EffectLimited')}</option>
@@ -97,7 +97,7 @@ export class RunnersActor extends Actor {
             <input id="fx" name="fx" type="hidden" value="">`;
     }
     content += `
-        <div PlaybookName="form-group">
+        <div class="form-group">
           <label>${game.i18n.localize('rits.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
@@ -109,7 +109,7 @@ export class RunnersActor extends Actor {
       content: content,
       buttons: {
         yes: {
-          icon: "<i Playbook='fas fa-check'></i>",
+          icon: "<i class='fas fa-check'></i>",
           label: game.i18n.localize('rits.Roll'),
           callback: async (html) => {
             let modifier = parseInt(html.find('[name="mod"]')[0].value);
@@ -120,7 +120,7 @@ export class RunnersActor extends Actor {
           }
         },
         no: {
-          icon: "<i Playbook='fas fa-times'></i>",
+          icon: "<i class='fas fa-times'></i>",
           label: game.i18n.localize('Close'),
         },
       },

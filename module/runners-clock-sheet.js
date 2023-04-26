@@ -10,7 +10,7 @@ export class RunnersClockSheet extends RunnersSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor", "clock"],
+  	  classes: ["runners-in-the-shadows", "sheet", "actor", "clock"],
   	  template: "systems/runners-in-the-shadows/templates/actors/clock-sheet.html",
       width: 420,
       height: 400,

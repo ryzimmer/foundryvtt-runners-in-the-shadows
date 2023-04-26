@@ -11,7 +11,7 @@ export class RunnersItemSheet extends ItemSheet {
 	static get defaultOptions() {
 
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-			Playbooks: ["runners-in-the-shadows", "sheet", "item"],
+			classes: ["runners-in-the-shadows", "sheet", "item"],
 			width: 560,
 			height: 'auto',
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]

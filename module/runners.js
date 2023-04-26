@@ -34,14 +34,14 @@ Hooks.once("init", async function() {
     sizes: [ 4, 6, 8 ]
   };
 
-  CONFIG.Item.documentPlaybook = RunnersItem;
-  CONFIG.Actor.documentPlaybook = RunnersActor;
-  CONFIG.ActiveEffect.documentPlaybook = RunnersActiveEffect;
+  CONFIG.Item.documentClass = RunnersItem;
+  CONFIG.Actor.documentClass = RunnersActor;
+  CONFIG.ActiveEffect.documentClass = RunnersActiveEffect;
 
   // Register System Settings
   registerSystemSettings();
 
-  // Register sheet application Playbooks
+  // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("Runners", RunnersActorSheet, { types: ["character"], makeDefault: true });
   Actors.registerSheet("Runners", RunnersCrewSheet, { types: ["crew"], makeDefault: true });
@@ -254,8 +254,8 @@ Hooks.once("init", async function() {
     }
 
     // Label for 0
-    html += `<label Playbook="clock-zero-label" for="clock-0-${uniq_id}}"><i Playbook="fab fa-creative-commons-zero nullifier"></i></label>`;
-    html += `<div id="Runners-clock-${uniq_id}" Playbook="Runners-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/runners-in-the-shadows/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
+    html += `<label class="clock-zero-label" for="clock-0-${uniq_id}}"><i class="fab fa-creative-commons-zero nullifier"></i></label>`;
+    html += `<div id="Runners-clock-${uniq_id}" class="Runners-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/runners-in-the-shadows/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
 
     let zero_checked = (parseInt(current_value) === 0) ? 'checked' : '';
     html += `<input type="radio" value="0" id="clock-0-${uniq_id}}" data-dType="String" name="${parameter_name}" ${zero_checked}>`;
@@ -297,7 +297,7 @@ Hooks.once("ready", function() {
 
 // getSceneControlButtons
 Hooks.on("renderSceneControls", async (app, html) => {
-  let dice_roller = $('<li Playbook="scene-control" title="Dice Roll"><i Playbook="fas fa-dice"></i></li>');
+  let dice_roller = $('<li class="scene-control" title="Dice Roll"><i class="fas fa-dice"></i></li>');
   dice_roller.click( async function() {
     await simpleRollPopup();
   });

@@ -80,7 +80,7 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
     roll: r
   }
 
-  CONFIG.ChatMessage.documentPlaybook.create(messageData, {})
+  CONFIG.ChatMessage.documentClass.create(messageData, {})
 }
 
 /**
@@ -198,13 +198,13 @@ export async function simpleRollPopup() {
       <h2>${game.i18n.localize("rits.RollSomeDice")}</h2>
       <p>${game.i18n.localize("rits.RollTokenDescription")}</p>
       <form>
-        <div Playbook="form-group">
+        <div class="form-group">
           <label>${game.i18n.localize("rits.RollNumberOfDice")}:</label>
           <select id="qty" name="qty">
             ${Array(11).fill().map((item, i) => `<option value="${i}">${i}d</option>`).join('')}
           </select>
         </div>
-        <div PlaybookName="form-group">
+        <div className="form-group">
           <label>${game.i18n.localize('rits.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
@@ -212,7 +212,7 @@ export async function simpleRollPopup() {
     `,
     buttons: {
       yes: {
-        icon: "<i Playbook='fas fa-check'></i>",
+        icon: "<i class='fas fa-check'></i>",
         label: `Roll`,
         callback: async (html) => {
           let diceQty = html.find('[name="qty"]')[0].value;
@@ -221,7 +221,7 @@ export async function simpleRollPopup() {
         },
       },
       no: {
-        icon: "<i Playbook='fas fa-times'></i>",
+        icon: "<i class='fas fa-times'></i>",
         label: game.i18n.localize('Cancel'),
       },
     },

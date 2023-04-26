@@ -9,7 +9,7 @@ export class RunnersCrewSheet extends RunnersSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor", "crew"],
+  	  classes: ["runners-in-the-shadows", "sheet", "actor", "crew"],
   	  template: "systems/runners-in-the-shadows/templates/crew-sheet.html",
       width: 940,
       height: 1020,

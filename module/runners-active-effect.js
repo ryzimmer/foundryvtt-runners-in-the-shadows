@@ -1,7 +1,7 @@
 import { RunnersHelpers } from "./runners-helpers.js";
 
 /**
- * Extend the base ActiveEffect Playbook to implement system-specific logic.
+ * Extend the base ActiveEffect class to implement system-specific logic.
  * @extends {ActiveEffect}
  */
 
@@ -107,7 +107,7 @@ export class RunnersActiveEffect extends ActiveEffect {
 
     };
 
-    // Iterate over active effects, Playbookifying them into categories
+    // Iterate over active effects, classifying them into categories
     for ( let e of effects ) {
       e._getSourceName(); // Trigger a lookup for the source name
       if ( e.isSuppressed ) categories.suppressed.effects.push(e);

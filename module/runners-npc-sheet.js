@@ -9,7 +9,7 @@ export class RunnersNPCSheet extends RunnersSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor"],
+  	  classes: ["runners-in-the-shadows", "sheet", "actor"],
   	  template: "systems/runners-in-the-shadows/templates/npc-sheet.html",
       width: 900,
       height: 'auto',
