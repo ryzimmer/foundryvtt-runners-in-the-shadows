@@ -1,8 +1,6 @@
 # FoundryVTT Runners in the Shadows character and crew sheets
 
-If you like my work - send thanks to astromortis@gmail.com  :3
-
-Contact Discord: `megastruktur#5704` in case you find any bugs or if you have any suggestions.
+Can be added as a system using manifest file: https://github.com/ryzimmer/foundryvtt-runners-in-the-shadows/releases/download/test/system.json
 
 ## Usage
 `"Item" - all Playbooks, crew types, upgrades, items, abilities, upgrades, etc.`
