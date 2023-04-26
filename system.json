@@ -16,10 +16,10 @@
     { "name": "ryzimmer" }
   ],
   "esmodules": [
-    "module/Runners.js"
+    "module/runners.js"
   ],
   "styles": [
-    "styles/Runners.css"
+    "styles/runners.css"
   ],
   "languages": [
     {
@@ -33,7 +33,7 @@
       "name": "Playbook",
       "label": "Playbooks",
       "system": "runners-in-the-shadows",
-      "path": "./packs/Playbooks.db",
+      "path": "./packs/playbooks.db",
       "type": "Item"
     },
     {
