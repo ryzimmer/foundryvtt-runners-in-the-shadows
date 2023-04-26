@@ -466,11 +466,11 @@
 .runners-in-the-shadows.crew.sheet .nuyen.nuyen-stashed {
   width: 190px;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock {
   margin: 0 auto;
   position: relative;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock {
   position: relative;
   padding: 0;
   width: 88px;
@@ -480,7 +480,7 @@
   overflow: hidden;
   background-size: cover;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock label {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock label {
   overflow: hidden;
   position: absolute;
   top: -50%;
@@ -491,27 +491,27 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock label:hover {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock input {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock input {
   position: absolute;
   display: none;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock input[value="0"] {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock input[value="0"] {
   display: none;
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock *:nth-child(3) {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(180deg);
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock *:nth-child(5) {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock *:nth-child(5) {
   transform: rotate(90deg) skewY(180deg);
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock *:nth-child(7) {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock *:nth-child(7) {
   transform: rotate(180deg) skewY(180deg);
 }
-.runners-in-the-shadows.crew.sheet * .harm-armor .crew-karma-clock .runners-clock *:nth-child(9) {
+.runners-in-the-shadows.crew.sheet * .harm-armor .character-health-clock .runners-clock *:nth-child(9) {
   transform: rotate(270deg) skewY(180deg);
 }
 .runners-in-the-shadows.crew.sheet .item {

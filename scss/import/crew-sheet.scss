@@ -36,11 +36,12 @@ $coin_margin: 3px;
   margin-bottom: 10px;
 }
 
-   // Clock
-   .crew-karma-clock {
-    margin: 0 auto;
-    @include clock(8, 88);
-  }
+// Clock
+.character-health-clock {
+  margin: 0 auto;
+  @include clock(4, 88);
+}
+
   
 .name,
 .lair
