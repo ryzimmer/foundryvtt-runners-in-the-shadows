@@ -25,7 +25,7 @@
 /*
  * Custom Radio Round
  */
-@font-face {
+ @font-face {
   font-family: "Kirsty";
   src: url("assets/fonts/Kirsty/Kirsty.ttf") format("truetype");
   /* Safari, Android, iOS */
@@ -255,7 +255,7 @@
 .runners-in-the-shadows .clocks.clocks-4 {
   position: relative;
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock {
   position: relative;
   padding: 0;
   width: 200px;
@@ -265,7 +265,7 @@
   overflow: hidden;
   background-size: cover;
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock label {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock label {
   overflow: hidden;
   position: absolute;
   top: -50%;
@@ -276,33 +276,33 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock label:hover {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock input {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock input {
   position: absolute;
   display: none;
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock input[value="0"] {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock input[value="0"] {
   display: none;
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock *:nth-child(3) {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(180deg);
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock *:nth-child(5) {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock *:nth-child(5) {
   transform: rotate(90deg) skewY(180deg);
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock *:nth-child(7) {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock *:nth-child(7) {
   transform: rotate(180deg) skewY(180deg);
 }
-.runners-in-the-shadows .clocks.clocks-4 .Runners-clock *:nth-child(9) {
+.runners-in-the-shadows .clocks.clocks-4 .runners-clock *:nth-child(9) {
   transform: rotate(270deg) skewY(180deg);
 }
 .runners-in-the-shadows .clocks.clocks-6 {
   position: relative;
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock {
   position: relative;
   padding: 0;
   width: 200px;
@@ -312,7 +312,7 @@
   overflow: hidden;
   background-size: cover;
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock label {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock label {
   overflow: hidden;
   position: absolute;
   top: -50%;
@@ -323,39 +323,39 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock label:hover {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock input {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock input {
   position: absolute;
   display: none;
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock input[value="0"] {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock input[value="0"] {
   display: none;
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock *:nth-child(3) {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(150deg);
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock *:nth-child(5) {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock *:nth-child(5) {
   transform: rotate(60deg) skewY(150deg);
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock *:nth-child(7) {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock *:nth-child(7) {
   transform: rotate(120deg) skewY(150deg);
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock *:nth-child(9) {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock *:nth-child(9) {
   transform: rotate(180deg) skewY(150deg);
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock *:nth-child(11) {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock *:nth-child(11) {
   transform: rotate(240deg) skewY(150deg);
 }
-.runners-in-the-shadows .clocks.clocks-6 .Runners-clock *:nth-child(13) {
+.runners-in-the-shadows .clocks.clocks-6 .runners-clock *:nth-child(13) {
   transform: rotate(300deg) skewY(150deg);
 }
 .runners-in-the-shadows .clocks.clocks-8 {
   position: relative;
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock {
   position: relative;
   padding: 0;
   width: 200px;
@@ -365,7 +365,7 @@
   overflow: hidden;
   background-size: cover;
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock label {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock label {
   overflow: hidden;
   position: absolute;
   top: -50%;
@@ -376,45 +376,45 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock label:hover {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock input {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock input {
   position: absolute;
   display: none;
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock input[value="0"] {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock input[value="0"] {
   display: none;
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(3) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(5) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(5) {
   transform: rotate(45deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(7) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(7) {
   transform: rotate(90deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(9) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(9) {
   transform: rotate(135deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(11) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(11) {
   transform: rotate(180deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(13) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(13) {
   transform: rotate(225deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(15) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(15) {
   transform: rotate(270deg) skewY(135deg);
 }
-.runners-in-the-shadows .clocks.clocks-8 .Runners-clock *:nth-child(17) {
+.runners-in-the-shadows .clocks.clocks-8 .runners-clock *:nth-child(17) {
   transform: rotate(315deg) skewY(135deg);
 }
-.runners-in-the-shadows .Runners-clock-name-type > * {
+.runners-in-the-shadows .runners-clock-name-type > * {
   margin-bottom: 10px;
 }
-.runners-in-the-shadows .Runners-clock-name-type .Runners-clock {
+.runners-in-the-shadows .runners-clock-name-type .runners-clock {
   margin: 10px auto;
 }
 .runners-in-the-shadows.crew.sheet .nuyen {
@@ -868,7 +868,7 @@
   border-top: none;
   padding: 5px;
 }
-.runners-in-the-shadows.crew.sheet .playbook-name {
+.runners-in-the-shadows.crew.sheet .class-name {
   width: 512px;
   height: 120px;
   display: flex;
@@ -878,11 +878,11 @@
   text-transform: uppercase;
   border: 3px solid #191813;
 }
-.runners-in-the-shadows.crew.sheet .playbook-name .big-name {
+.runners-in-the-shadows.crew.sheet .class-name .big-name {
   font-weight: bold;
   font-family: Kirsty, serif;
 }
-.runners-in-the-shadows.crew.sheet .playbook-name .big-description {
+.runners-in-the-shadows.crew.sheet .class-name .big-description {
   font-size: 20px;
   font-family: "Crimson Text", serif;
   color: #191813;
@@ -1272,7 +1272,7 @@
   margin: 0 auto;
   position: relative;
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock {
   position: relative;
   padding: 0;
   width: 88px;
@@ -1282,7 +1282,7 @@
   overflow: hidden;
   background-size: cover;
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock label {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock label {
   overflow: hidden;
   position: absolute;
   top: -50%;
@@ -1293,27 +1293,27 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock label:hover {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock input {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock input {
   position: absolute;
   display: none;
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock input[value="0"] {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock input[value="0"] {
   display: none;
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock *:nth-child(3) {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock *:nth-child(3) {
   transform: rotate(0deg) skewY(180deg);
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock *:nth-child(5) {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock *:nth-child(5) {
   transform: rotate(90deg) skewY(180deg);
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock *:nth-child(7) {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock *:nth-child(7) {
   transform: rotate(180deg) skewY(180deg);
 }
-.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .Runners-clock *:nth-child(9) {
+.runners-in-the-shadows.actor.pc * .harm-armor .character-health-clock .runners-clock *:nth-child(9) {
   transform: rotate(270deg) skewY(180deg);
 }
 .runners-in-the-shadows.actor.pc * .harm-armor .character-armor-uses div {
@@ -1582,21 +1582,21 @@
   font-weight: bold;
 }
 
-.Runners-die-tooltip .die {
+.runners-die-tooltip .die {
   font-weight: bold;
   text-transform: capitalize;
   font-size: large;
 }
-.Runners-die-tooltip .die.critical-success {
+.runners-die-tooltip .die.critical-success {
   color: #12a012;
 }
-.Runners-die-tooltip .die.success {
+.runners-die-tooltip .die.success {
   color: #008000;
 }
-.Runners-die-tooltip .die.partial-success {
+.runners-die-tooltip .die.partial-success {
   color: #04578f;
 }
-.Runners-die-tooltip .die.failure {
+.runners-die-tooltip .die.failure {
   color: red;
 }
 
@@ -1631,4 +1631,4 @@
   visibility: visible;
 }
 
-/*# sourceMappingURL=Runners.css.map */
+/*# sourceMappingURL=runners.css.map */

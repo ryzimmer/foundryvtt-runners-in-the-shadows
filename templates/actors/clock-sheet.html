@@ -1,6 +1,6 @@
 <form class="{{cssclass}} clock-block" autocomplete="off">
 
-    <div class="flexcol Runners-clock-name-type">
+    <div class="flexcol runners-clock-name-type">
         {{#if editable}}
         <input type="text" id="{{id}}-clock-name" name="name" value="{{name}}">
 
@@ -14,7 +14,7 @@
         {{/if}}
 
         <div class="clocks clocks-{{system.type}}">
-            {{{Runners-clock "system.value" system.type system.value _id}}}
+            {{{runners-clock "system.value" system.type system.value _id}}}
         </div>
     </div>
 </form>

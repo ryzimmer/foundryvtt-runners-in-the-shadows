@@ -242,7 +242,7 @@ Hooks.once("init", async function() {
    * Create appropriate Runners clock
    */
 
-  Handlebars.registerHelper('Runners-clock', function(parameter_name, type, current_value, uniq_id) {
+  Handlebars.registerHelper('runners-clock', function(parameter_name, type, current_value, uniq_id) {
 
     let html = '';
 
@@ -256,7 +256,7 @@ Hooks.once("init", async function() {
 
     // Label for 0
     html += `<label class="clock-zero-label" for="clock-0-${uniq_id}}"><i class="fab fa-creative-commons-zero nullifier"></i></label>`;
-    html += `<div id="Runners-clock-${uniq_id}" class="Runners-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/runners-in-the-shadows/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
+    html += `<div id="runners-clock-${uniq_id}" class="runners-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/runners-in-the-shadows/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
 
     let zero_checked = (parseInt(current_value) === 0) ? 'checked' : '';
     html += `<input type="radio" value="0" id="clock-0-${uniq_id}}" data-dType="String" name="${parameter_name}" ${zero_checked}>`;
