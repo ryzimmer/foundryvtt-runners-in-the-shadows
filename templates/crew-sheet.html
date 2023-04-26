@@ -150,8 +150,12 @@
         </div>
 
         {{!-Karma Clock}}
-        <div id="crew-{{_id}}-karma-clock" class="crew-karma-clock">
-            {{{runners-clock "system.healing-clock" 6 system.healing-clock _id}}}
+        <div class="flex-vertical">
+            <label for="crew-{{_id}}-karma-clock">{{localize "rits.Karma"}} <i
+                class="fab fa-creative-commons-zero nullifier"></i></label>
+            <div id="crew-{{_id}}-karma-clock" class="crew-karma-clock">
+                {{{runners-clock "system.healing-clock" 6 system.healing-clock _id}}}
+            </div>
         </div>
 
         {{!-- Heat/Wanted --}}
