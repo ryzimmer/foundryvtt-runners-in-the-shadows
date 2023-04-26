@@ -30,7 +30,7 @@
   ],
   "packs": [
     {
-      "name": "Playbook",
+      "name": "playbook",
       "label": "Playbooks",
       "system": "runners-in-the-shadows",
       "path": "./packs/playbooks.db",
