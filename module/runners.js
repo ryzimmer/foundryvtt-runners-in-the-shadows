@@ -17,6 +17,7 @@ import { RunnersCrewSheet } from "./runners-crew-sheet.js";
 import { RunnersClockSheet } from "./runners-clock-sheet.js";
 import { RunnersNPCSheet } from "./runners-npc-sheet.js";
 import { RunnersFactionSheet } from "./runners-faction-sheet.js";
+import { RunnersActiveEffect } from "./runners-active-effect.js";
 import * as migrations from "./migration.js";
 
 window.RunnersHelpers = RunnersHelpers;
