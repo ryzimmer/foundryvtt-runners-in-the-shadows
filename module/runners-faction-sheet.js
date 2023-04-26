@@ -1,16 +1,16 @@
 
-import { BladesSheet } from "./blades-sheet.js";
+import { RunnersSheet } from "./Runners-sheet.js";
 
 /**
- * @extends {BladesSheet}
+ * @extends {RunnersSheet}
  */
-export class BladesFactionSheet extends BladesSheet {
+export class RunnersFactionSheet extends RunnersSheet {
 
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["blades-in-the-dark", "sheet", "actor", "faction"],
-  	  template: "systems/blades-in-the-dark/templates/faction-sheet.html",
+  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor", "faction"],
+  	  template: "systems/runners-in-the-shadows/templates/faction-sheet.html",
       width: 900,
       height: 'auto',
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content"}]

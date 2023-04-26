@@ -1,18 +1,18 @@
 
-import { BladesSheet } from "./blades-sheet.js";
-import { BladesActiveEffect } from "./blades-active-effect.js";
+import { RunnersSheet } from "./Runners-sheet.js";
+import { RunnersActiveEffect } from "./Runners-active-effect.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {BladesSheet}
+ * @extends {RunnersSheet}
  */
-export class BladesActorSheet extends BladesSheet {
+export class RunnersActorSheet extends RunnersSheet {
 
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["blades-in-the-dark", "sheet", "actor", "pc"],
-  	  template: "systems/blades-in-the-dark/templates/actor-sheet.html",
+  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor", "pc"],
+  	  template: "systems/runners-in-the-shadows/templates/actor-sheet.html",
       width: 700,
       height: 970,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}]
@@ -30,7 +30,7 @@ export class BladesActorSheet extends BladesSheet {
     sheetData.isGM = game.user.isGM;
 
     // Prepare active effects
-    sheetData.effects = BladesActiveEffect.prepareActiveEffectCategories(this.actor.effects);
+    sheetData.effects = RunnersActiveEffect.prepareActiveEffectCategories(this.actor.effects);
 
     // Calculate Load
     let loadout = 0;
@@ -47,29 +47,12 @@ export class BladesActorSheet extends BladesSheet {
     sheetData.system.loadout = loadout;
 
     // Encumbrance Levels
-    let load_level=["BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Encumbered",
-			"BITD.Encumbered","BITD.Encumbered","BITD.OverMax"];
-    let mule_level=["BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal",
-			"BITD.Heavy","BITD.Encumbered","BITD.OverMax"];
-    let mule_present=0;
+    let load_level=["rits.Light","rits.Light","rits.Light","rits.Light","rits.Normal","rits.Normal","rits.Heavy","rits.Encumbered",
+			"rits.Encumbered","rits.Encumbered","rits.OverMax"];
+    let mule_level=["rits.Light","rits.Light","rits.Light","rits.Light","rits.Light","rits.Light","rits.Normal","rits.Normal",
+			"rits.Heavy","rits.Encumbered","rits.OverMax"];
 
-
-    //look for Mule ability
-    // @todo - fix translation.
-    sheetData.items.forEach(i => {
-      if (i.type === "ability" && i.name === "(C) Mule") {
-        mule_present = 1;
-      }
-    });
-
-    //set encumbrance level
-    if (mule_present) {
-      sheetData.system.load_level=mule_level[loadout];
-    } else {
-      sheetData.system.load_level=load_level[loadout];
-    }
-
-    sheetData.system.load_levels = {"BITD.Light":"BITD.Light", "BITD.Normal":"BITD.Normal", "BITD.Heavy":"BITD.Heavy"};
+    sheetData.system.load_levels = {"rits.Light":"rits.Light", "rits.Normal":"rits.Normal", "rits.Heavy":"rits.Heavy"};
 
     sheetData.system.description = await TextEditor.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
 
@@ -100,7 +83,7 @@ export class BladesActorSheet extends BladesSheet {
     });
 
     // manage active effects
-    html.find(".effect-control").click(ev => BladesActiveEffect.onManageActiveEffect(ev, this.actor));
+    html.find(".effect-control").click(ev => RunnersActiveEffect.onManageActiveEffect(ev, this.actor));
   }
 
   /* -------------------------------------------- */

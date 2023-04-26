@@ -1,11 +1,11 @@
-import { BladesHelpers } from "./blades-helpers.js";
+import { RunnersHelpers } from "./Runners-helpers.js";
 
 /**
- * Extend the base ActiveEffect class to implement system-specific logic.
+ * Extend the base ActiveEffect Playbook to implement system-specific logic.
  * @extends {ActiveEffect}
  */
 
-export class BladesActiveEffect extends ActiveEffect {
+export class RunnersActiveEffect extends ActiveEffect {
   /**
    * Is this active effect currently suppressed?
    * @type {boolean}
@@ -17,7 +17,7 @@ export class BladesActiveEffect extends ActiveEffect {
   apply(actor, change) {
     if ( this.isSuppressed ) return null;
     //this allows for math and actor data references in the change values. Probably not necessary for
-    // blades, but it was simple, and you never know what users will do. Probably ruin everything.
+    // Runners, but it was simple, and you never know what users will do. Probably ruin everything.
     change.value = Roll.replaceFormulaData(change.value, actor.system);
     try {
       change.value = Roll.safeEval(change.value).toString();
@@ -59,7 +59,7 @@ export class BladesActiveEffect extends ActiveEffect {
       case "create":
         return owner.createEmbeddedDocuments("ActiveEffect", [{
           label: "New Effect",
-          icon: "systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png",
+          icon: "systems/runners-in-the-shadows/styles/assets/icons/Icon.3_13.png",
           origin: owner.uuid,
           "duration.rounds": selector.dataset.effectType === "temporary" ? 1 : undefined,
           disabled: selector.dataset.effectType === "inactive"
@@ -107,7 +107,7 @@ export class BladesActiveEffect extends ActiveEffect {
 
     };
 
-    // Iterate over active effects, classifying them into categories
+    // Iterate over active effects, Playbookifying them into categories
     for ( let e of effects ) {
       e._getSourceName(); // Trigger a lookup for the source name
       if ( e.isSuppressed ) categories.suppressed.effects.push(e);

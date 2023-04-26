@@ -5,7 +5,7 @@
  * @param {string} position
  * @param {string} effect
  */
-export async function bladesRoll(dice_amount, attribute_name = "", position = "risky", effect = "standard", note = "") {
+export async function RunnersRoll(dice_amount, attribute_name = "", position = "risky", effect = "standard", note = "") {
 
   // ChatMessage.getSpeaker(controlledToken)
   let zeromode = false;
@@ -33,44 +33,44 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
 
   let speaker = ChatMessage.getSpeaker();
   let rolls = (r.terms)[0].results;
-  let attribute_label = BladesHelpers.getAttributeLabel(attribute_name);
+  let attribute_label = RunnersHelpers.getAttributeLabel(attribute_name);
 
   // Retrieve Roll status.
-  let roll_status = getBladesRollStatus(rolls, zeromode);
+  let roll_status = getRunnersRollStatus(rolls, zeromode);
 
   let result;
-  if (BladesHelpers.isAttributeAction(attribute_name)) {
+  if (RunnersHelpers.isAttributeAction(attribute_name)) {
     let position_localize = '';
     switch (position) {
       case 'controlled':
-        position_localize = 'BITD.PositionControlled'
+        position_localize = 'rits.PositionControlled'
         break;
       case 'desperate':
-        position_localize = 'BITD.PositionDesperate'
+        position_localize = 'rits.PositionDesperate'
         break;
       case 'risky':
       default:
-        position_localize = 'BITD.PositionRisky'
+        position_localize = 'rits.PositionRisky'
     }
 
     let effect_localize = '';
     switch (effect) {
       case 'limited':
-        effect_localize = 'BITD.EffectLimited'
+        effect_localize = 'rits.EffectLimited'
         break;
       case 'great':
-        effect_localize = 'BITD.EffectGreat'
+        effect_localize = 'rits.EffectGreat'
         break;
       case 'standard':
       default:
-        effect_localize = 'BITD.EffectStandard'
+        effect_localize = 'rits.EffectStandard'
     }
 
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/action-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, position: position, position_localize: position_localize, effect: effect, effect_localize: effect_localize, note: note});
+    result = await renderTemplate("systems/runners-in-the-shadows/templates/chat/action-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, position: position, position_localize: position_localize, effect: effect, effect_localize: effect_localize, note: note});
   } else {
-    let stress = getBladesRollStress(rolls, zeromode);
+    let stress = getRunnersRollStress(rolls, zeromode);
 
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/resistance-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, stress: stress, note: note});
+    result = await renderTemplate("systems/runners-in-the-shadows/templates/chat/resistance-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, stress: stress, note: note});
   }
 
   let messageData = {
@@ -80,7 +80,7 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
     roll: r
   }
 
-  CONFIG.ChatMessage.documentClass.create(messageData, {})
+  CONFIG.ChatMessage.documentPlaybook.create(messageData, {})
 }
 
 /**
@@ -92,7 +92,7 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
  * @param {Array} rolls
  * @param {Boolean} zeromode
  */
-export function getBladesRollStatus(rolls, zeromode = false) {
+export function getRunnersRollStatus(rolls, zeromode = false) {
 
   // Sort roll values from lowest to highest.
   let sorted_rolls = rolls.map(i => i.result).sort();
@@ -147,7 +147,7 @@ export function getBladesRollStatus(rolls, zeromode = false) {
  * @param {Array} rolls
  * @param {Boolean} zeromode
  */
-export function getBladesRollStress(rolls, zeromode = false) {
+export function getRunnersRollStress(rolls, zeromode = false) {
 
   var stress = 6;
 
@@ -195,33 +195,33 @@ export async function simpleRollPopup() {
   new Dialog({
     title: `Simple Roll`,
     content: `
-      <h2>${game.i18n.localize("BITD.RollSomeDice")}</h2>
-      <p>${game.i18n.localize("BITD.RollTokenDescription")}</p>
+      <h2>${game.i18n.localize("rits.RollSomeDice")}</h2>
+      <p>${game.i18n.localize("rits.RollTokenDescription")}</p>
       <form>
-        <div class="form-group">
-          <label>${game.i18n.localize("BITD.RollNumberOfDice")}:</label>
+        <div Playbook="form-group">
+          <label>${game.i18n.localize("rits.RollNumberOfDice")}:</label>
           <select id="qty" name="qty">
             ${Array(11).fill().map((item, i) => `<option value="${i}">${i}d</option>`).join('')}
           </select>
         </div>
-        <div className="form-group">
-          <label>${game.i18n.localize('BITD.Notes')}:</label>
+        <div PlaybookName="form-group">
+          <label>${game.i18n.localize('rits.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
       </form>
     `,
     buttons: {
       yes: {
-        icon: "<i class='fas fa-check'></i>",
+        icon: "<i Playbook='fas fa-check'></i>",
         label: `Roll`,
         callback: async (html) => {
           let diceQty = html.find('[name="qty"]')[0].value;
           let note = html.find('[name="note"]')[0].value;
-          await bladesRoll(diceQty,"","","",note);
+          await RunnersRoll(diceQty,"","","",note);
         },
       },
       no: {
-        icon: "<i class='fas fa-times'></i>",
+        icon: "<i Playbook='fas fa-times'></i>",
         label: game.i18n.localize('Cancel'),
       },
     },

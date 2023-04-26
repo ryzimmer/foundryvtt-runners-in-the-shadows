@@ -1,4 +1,4 @@
-This work is based on Blades in the Dark (found at http://www.bladesinthedark.com/), product of One Seven Design, developed and authored by John Harper, and licensed for our use under the Creative Commons Attribution 3.0 Unported license (http://creativecommons.org/licenses/by/3.0/).
+This work is based on Runners in the Shadows (found at http://www.Runnersinthedark.com/), product of One Seven Design, developed and authored by John Harper, and licensed for our use under the Creative Commons Attribution 3.0 Unported license (http://creativecommons.org/licenses/by/3.0/).
 
                       GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -300,9 +300,9 @@ included in conveying the object code work.
 tangible personal property which is normally used for personal, family,
 or household purposes, or (2) anything designed or sold for incorporation
 into a dwelling.  In determining whether a product is a consumer product,
-doubtful cases shall be resolved in favor of coverage.  For a particular
+doubtful cases shall be sociald in favor of coverage.  For a particular
 product received by a particular user, "normally used" refers to a
-typical or common use of that class of product, regardless of the status
+typical or common use of that Playbook of product, regardless of the status
 of the particular user or of the way in which the particular user
 actually uses, or expects or is expected to use, the product.  A product
 is a consumer product regardless of whether the product has substantial

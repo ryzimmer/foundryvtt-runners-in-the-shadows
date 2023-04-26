@@ -3,7 +3,7 @@
  * @extends {ActorSheet}
  */
 
-export class BladesSheet extends ActorSheet {
+export class RunnersSheet extends ActorSheet {
 
   /* -------------------------------------------- */
 
@@ -33,9 +33,9 @@ export class BladesSheet extends ActorSheet {
       input_type = "radio";
     }
 
-    let items = await BladesHelpers.getAllItemsByType(item_type, game);
+    let items = await RunnersHelpers.getAllItemsByType(item_type, game);
 
-    let html = `<div class="items-to-add">`;
+    let html = `<div Playbook="items-to-add">`;
 
     items.forEach(e => {
       let addition_price_load = ``;
@@ -47,8 +47,8 @@ export class BladesSheet extends ActorSheet {
       }
 
       html += `<input id="select-item-${e._id}" type="${input_type}" name="select_items" value="${e._id}">`;
-      html += `<label class="flex-horizontal" for="select-item-${e._id}">`;
-      html += `${game.i18n.localize(e.name)} ${addition_price_load} <i class="tooltip fas fa-question-circle"><span class="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
+      html += `<label Playbook="flex-horizontal" for="select-item-${e._id}">`;
+      html += `${game.i18n.localize(e.name)} ${addition_price_load} <i Playbook="tooltip fas fa-question-circle"><span Playbook="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
       html += `</label>`;
     });
 
@@ -63,12 +63,12 @@ export class BladesSheet extends ActorSheet {
       content: html,
       buttons: {
         one: {
-          icon: '<i class="fas fa-check"></i>',
+          icon: '<i Playbook="fas fa-check"></i>',
           label: game.i18n.localize('Add'),
           callback: async (html) => await this.addItemsToSheet(item_type, $(html).find('.items-to-add'))
         },
         two: {
-          icon: '<i class="fas fa-times"></i>',
+          icon: '<i Playbook="fas fa-times"></i>',
           label: game.i18n.localize('Cancel'),
           callback: () => false
         }
@@ -83,7 +83,7 @@ export class BladesSheet extends ActorSheet {
 
   async addItemsToSheet(item_type, el) {
 
-    let items = await BladesHelpers.getAllItemsByType(item_type, game);
+    let items = await RunnersHelpers.getAllItemsByType(item_type, game);
     let items_to_add = [];
 
     el.find("input:checked").each(function() {
@@ -122,7 +122,7 @@ export class BladesSheet extends ActorSheet {
     else if (update_type == "hold") {
       update = {_id: item_id, system:{hold:{value: update_value}}};
     } else {
-      console.log("update attempted for type undefined in blades-sheet.js onUpdateBoxClick function");
+      console.log("update attempted for type undefined in Runners-sheet.js onUpdateBoxClick function");
       return;
     };
 

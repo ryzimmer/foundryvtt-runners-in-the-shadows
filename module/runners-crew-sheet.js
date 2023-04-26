@@ -1,16 +1,16 @@
 
-import { BladesSheet } from "./blades-sheet.js";
+import { RunnersSheet } from "./Runners-sheet.js";
 
 /**
- * @extends {BladesSheet}
+ * @extends {RunnersSheet}
  */
-export class BladesCrewSheet extends BladesSheet {
+export class RunnersCrewSheet extends RunnersSheet {
 
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["blades-in-the-dark", "sheet", "actor", "crew"],
-  	  template: "systems/blades-in-the-dark/templates/crew-sheet.html",
+  	  Playbooks: ["runners-in-the-shadows", "sheet", "actor", "crew"],
+  	  template: "systems/runners-in-the-shadows/templates/crew-sheet.html",
       width: 940,
       height: 1020,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "turfs"}]
@@ -36,7 +36,7 @@ export class BladesCrewSheet extends BladesSheet {
       if (item.type === "crew_type") {
         // Object.entries(item.data.turfs).forEach(turf => {turfs_amount += (turf.value === true) ? 1 : 0});
         Object.entries(item.system.turfs).forEach(([key, turf]) => {
-          if (turf.name === 'BITD.Turf') {
+          if (turf.name === 'rits.Turf') {
             turfs_amount += (turf.value === true) ? 1 : 0;
           }
         });
@@ -73,7 +73,7 @@ export class BladesCrewSheet extends BladesSheet {
 
     // Add a new Cohort
     html.find('.add-item').click(ev => {
-      BladesHelpers._addOwnedItem(ev, this.actor);
+      RunnersHelpers._addOwnedItem(ev, this.actor);
     });
 
     // Toggle Turf

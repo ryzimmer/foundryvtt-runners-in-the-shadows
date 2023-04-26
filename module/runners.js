@@ -6,51 +6,50 @@
 
 // Import Modules
 import { registerSystemSettings } from "./settings.js";
-import { preloadHandlebarsTemplates } from "./blades-templates.js";
-import { bladesRoll, simpleRollPopup } from "./blades-roll.js";
-import { BladesHelpers } from "./blades-helpers.js";
-import { BladesActor } from "./blades-actor.js";
-import { BladesItem } from "./blades-item.js";
-import { BladesItemSheet } from "./blades-item-sheet.js";
-import { BladesActorSheet } from "./blades-actor-sheet.js";
-import { BladesActiveEffect } from "./blades-active-effect.js";
-import { BladesCrewSheet } from "./blades-crew-sheet.js";
-import { BladesClockSheet } from "./blades-clock-sheet.js";
-import { BladesNPCSheet } from "./blades-npc-sheet.js";
-import { BladesFactionSheet } from "./blades-faction-sheet.js";
+import { preloadHandlebarsTemplates } from "./runners-templates.js";
+import { RunnersRoll, simpleRollPopup } from "./runners-roll.js";
+import { RunnersHelpers } from "./runners-helpers.js";
+import { RunnersActor } from "./runners-actor.js";
+import { RunnersItem } from "./runners-item.js";
+import { RunnersItemSheet } from "./runners-item-sheet.js";
+import { RunnersActorSheet } from "./runners-actor-sheet.js";
+import { RunnersCrewSheet } from "./runners-crew-sheet.js";
+import { RunnersClockSheet } from "./runners-clock-sheet.js";
+import { RunnersNPCSheet } from "./runners-npc-sheet.js";
+import { RunnersFactionSheet } from "./runners-faction-sheet.js";
 import * as migrations from "./migration.js";
 
-window.BladesHelpers = BladesHelpers;
+window.RunnersHelpers = RunnersHelpers;
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
 Hooks.once("init", async function() {
-  console.log(`Initializing Blades In the Dark System`);
+  console.log(`Initializing Runners in the Shadows System`);
 
-  game.blades = {
-    dice: bladesRoll
+  game.Runners = {
+    dice: RunnersRoll
   };
-  game.system.bladesClocks = {
+  game.system.RunnersClocks = {
     sizes: [ 4, 6, 8 ]
   };
 
-  CONFIG.Item.documentClass = BladesItem;
-  CONFIG.Actor.documentClass = BladesActor;
-  CONFIG.ActiveEffect.documentClass = BladesActiveEffect;
+  CONFIG.Item.documentPlaybook = RunnersItem;
+  CONFIG.Actor.documentPlaybook = RunnersActor;
+  CONFIG.ActiveEffect.documentPlaybook = RunnersActiveEffect;
 
   // Register System Settings
   registerSystemSettings();
 
-  // Register sheet application classes
+  // Register sheet application Playbooks
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("blades", BladesActorSheet, { types: ["character"], makeDefault: true });
-  Actors.registerSheet("blades", BladesCrewSheet, { types: ["crew"], makeDefault: true });
-  Actors.registerSheet("blades", BladesFactionSheet, { types: ["factions"], makeDefault: true });
-  Actors.registerSheet("blades", BladesClockSheet, { types: ["\uD83D\uDD5B clock"], makeDefault: true });
-  Actors.registerSheet("blades", BladesNPCSheet, { types: ["npc"], makeDefault: true });
+  Actors.registerSheet("Runners", RunnersActorSheet, { types: ["character"], makeDefault: true });
+  Actors.registerSheet("Runners", RunnersCrewSheet, { types: ["crew"], makeDefault: true });
+  Actors.registerSheet("Runners", RunnersFactionSheet, { types: ["factions"], makeDefault: true });
+  Actors.registerSheet("Runners", RunnersClockSheet, { types: ["\uD83D\uDD5B clock"], makeDefault: true });
+  Actors.registerSheet("Runners", RunnersNPCSheet, { types: ["npc"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("blades", BladesItemSheet, {makeDefault: true});
+  Items.registerSheet("Runners", RunnersItemSheet, {makeDefault: true});
   await preloadHandlebarsTemplates();
 
   Actors.registeredSheets.forEach(element => console.log(element.Actor.name));
@@ -134,12 +133,12 @@ Hooks.once("init", async function() {
     return html;
   });
 
-  Handlebars.registerHelper('crew_vault_coins', (max_coins, options) => {
+  Handlebars.registerHelper('crew_vault_nuyen', (max_nuyen, options) => {
 
     let html = options.fn(this);
-    for (let i = 1; i <= max_coins; i++) {
+    for (let i = 1; i <= max_nuyen; i++) {
 
-      html += "<input type=\"radio\" id=\"crew-coins-vault-" + i + "\" data-dType=\"Number\" name=\"system.vault.value\" value=\"" + i + "\"><label for=\"crew-coins-vault-" + i + "\"></label>";
+      html += "<input type=\"radio\" id=\"crew-nuyen-vault-" + i + "\" data-dType=\"Number\" name=\"system.vault.value\" value=\"" + i + "\"><label for=\"crew-nuyen-vault-" + i + "\"></label>";
     }
 
     return html;
@@ -239,10 +238,10 @@ Hooks.once("init", async function() {
 
 
   /**
-   * Create appropriate Blades clock
+   * Create appropriate Runners clock
    */
 
-  Handlebars.registerHelper('blades-clock', function(parameter_name, type, current_value, uniq_id) {
+  Handlebars.registerHelper('Runners-clock', function(parameter_name, type, current_value, uniq_id) {
 
     let html = '';
 
@@ -255,8 +254,8 @@ Hooks.once("init", async function() {
     }
 
     // Label for 0
-    html += `<label class="clock-zero-label" for="clock-0-${uniq_id}}"><i class="fab fa-creative-commons-zero nullifier"></i></label>`;
-    html += `<div id="blades-clock-${uniq_id}" class="blades-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
+    html += `<label Playbook="clock-zero-label" for="clock-0-${uniq_id}}"><i Playbook="fab fa-creative-commons-zero nullifier"></i></label>`;
+    html += `<div id="Runners-clock-${uniq_id}" Playbook="Runners-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/runners-in-the-shadows/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
 
     let zero_checked = (parseInt(current_value) === 0) ? 'checked' : '';
     html += `<input type="radio" value="0" id="clock-0-${uniq_id}}" data-dType="String" name="${parameter_name}" ${zero_checked}>`;
@@ -281,7 +280,7 @@ Hooks.once("init", async function() {
 Hooks.once("ready", function() {
 
   // Determine whether a system migration is required
-  const currentVersion = game.settings.get("bitd", "systemMigrationVersion");
+  const currentVersion = game.settings.get("rits", "systemMigrationVersion");
   const NEEDS_MIGRATION_VERSION = 2.15;
 
   let needMigration = (currentVersion < NEEDS_MIGRATION_VERSION) || (currentVersion === null);
@@ -298,7 +297,7 @@ Hooks.once("ready", function() {
 
 // getSceneControlButtons
 Hooks.on("renderSceneControls", async (app, html) => {
-  let dice_roller = $('<li class="scene-control" title="Dice Roll"><i class="fas fa-dice"></i></li>');
+  let dice_roller = $('<li Playbook="scene-control" title="Dice Roll"><i Playbook="fas fa-dice"></i></li>');
   dice_roller.click( async function() {
     await simpleRollPopup();
   });

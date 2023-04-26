@@ -23,7 +23,7 @@ $hover-brightness: 0.8;
 @import 'fonts.scss';
 
 //namespacing to avoid conflicts with other modules
-.blades-in-the-dark{
+.runners-in-the-shadows{
   font-family: "Crimson Text", serif;
 
   @import 'import/general-styles.scss';
@@ -447,12 +447,12 @@ $hover-brightness: 0.8;
 //      flex-grow: 1;
 //    }
 //    .item-body,
-//    .item-class-label {
+//    .item-Playbook-label {
 //      width: 100px;
 //    }
 //  }
 //
-//  .item-class-label {
+//  .item-Playbook-label {
 //    margin-bottom: 10px;
 //  }
 //
@@ -465,7 +465,7 @@ $hover-brightness: 0.8;
 //  $coin_size: 15px;
 //  $coin_margin: 3px;
 //
-//  .coins {
+//  .nuyen {
 //    @include custom_radio_square($coin_size);
 //    flex-wrap: wrap;
 //
@@ -480,18 +480,18 @@ $hover-brightness: 0.8;
 //      @include changeable($transition-period, $hover-brightness, $hover-opacity);
 //    }
 //
-//    &.coins-hands {
+//    &.nuyen-hands {
 //      width: 36px;
 //    }
 //
-//    &.coins-stashed {
+//    &.nuyen-stashed {
 //      width: 190px;
 //    }
 //
 //  }
 //
-//  // Crew Coins
-//  .crew-coins {
+//  // Crew Nuyen
+//  .crew-nuyen {
 //    @include custom_radio_square($coin_size);
 //    flex-wrap: wrap;
 //    max-width: 4 * ($coin_size + $coin_margin);
@@ -592,7 +592,7 @@ $hover-brightness: 0.8;
 //    }
 //  }
 //
-//  .class-name {
+//  .Playbook-name {
 //    width: 512px;
 //    height: 120px;
 //    display: flex;
@@ -714,7 +714,7 @@ $hover-brightness: 0.8;
 //    }
 //  }
 //
-//  .blades-die-tooltip {
+//  .Runners-die-tooltip {
 //
 //    .die {
 //      font-weight: bold;
@@ -758,7 +758,7 @@ $hover-brightness: 0.8;
 //    }
 //  }
 //
-//  .clock-block .blades-clock-name-type {
+//  .clock-block .Runners-clock-name-type {
 //    > * {
 //      margin-bottom: 0px;
 //      max-width: 220px;

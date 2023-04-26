@@ -1,4 +1,4 @@
-<div class="dice-tooltip blades-die-tooltip">
+<div class="dice-tooltip Runners-die-tooltip">
   {{#if attribute_label}}<div class="chat-label label-stripe-chat">{{localize attribute_label}}</div>{{/if}}
   {{#if position}}
     <div class="chat-label-small label-stripe-chat-small">
@@ -7,42 +7,42 @@
   {{/if}}
 
   {{#if (eq roll_status "critical-success")}}
-  <div class="die {{roll_status}}">{{localize "BITD.RollCriticalSuccess"}}</div>
+  <div class="die {{roll_status}}">{{localize "rits.RollCriticalSuccess"}}</div>
   <div class="description">
-    <p>{{{localize "BITD.RollDoWithIncreasedEffect"}}}</p>
+    <p>{{{localize "rits.RollDoWithIncreasedEffect"}}}</p>
   </div>
   {{/if}}
 
   {{#if (eq roll_status "success")}}
-  <div class="die {{roll_status}}">{{localize "BITD.RollSuccess"}}</div>
-  <div class="description"><p>{{{localize "BITD.RollDo"}}}</p></div>
+  <div class="die {{roll_status}}">{{localize "rits.RollSuccess"}}</div>
+  <div class="description"><p>{{{localize "rits.RollDo"}}}</p></div>
   {{/if}}
 
   {{#if (eq roll_status "partial-success")}}
-  <div class="die {{roll_status}}">{{localize "BITD.RollPartialSuccess"}}</div>
+  <div class="die {{roll_status}}">{{localize "rits.RollPartialSuccess"}}</div>
   <div class="description">
     <p>
       {{#if (eq position "controlled")}}
-      {{{localize "BITD.RollPartialSuccessPositionControlled"}}}
+      {{{localize "rits.RollPartialSuccessPositionControlled"}}}
       {{else if (eq position "risky")}}
-      {{{localize "BITD.RollPartialSuccessPositionRisky"}}}
+      {{{localize "rits.RollPartialSuccessPositionRisky"}}}
       {{else}}
-      {{{localize "BITD.RollPartialSuccessPosition"}}}
+      {{{localize "rits.RollPartialSuccessPosition"}}}
       {{/if}}
     </p>
   </div>
   {{/if}}
 
   {{#if (eq roll_status "failure")}}
-  <div class="die {{roll_status}}">{{localize "BITD.RollFailure"}}</div>
+  <div class="die {{roll_status}}">{{localize "rits.RollFailure"}}</div>
   <div class="description">
     <p>
       {{#if (eq position "controlled")}}
-      {{{localize "BITD.RollFailurePositionControlled"}}}
+      {{{localize "rits.RollFailurePositionControlled"}}}
       {{else if (eq position "risky")}}
-      {{{localize "BITD.RollFailurePositionRisky"}}}
+      {{{localize "rits.RollFailurePositionRisky"}}}
       {{else}}
-      {{{localize "BITD.RollFailurePositionDesperate"}}}
+      {{{localize "rits.RollFailurePositionDesperate"}}}
       {{/if}}
     </p>
   </div>

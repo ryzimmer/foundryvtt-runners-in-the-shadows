@@ -12,7 +12,7 @@ export function onManageActiveEffect(event, owner) {
     case "create":
       return owner.createEmbeddedDocuments("ActiveEffect", [{
         label: "New Effect",
-        icon: "systems/blades-in-the-dark/styles/assets/icons/Icon.3_13.png",
+        icon: "systems/runners-in-the-shadows/styles/assets/icons/Icon.3_13.png",
         origin: owner.uuid,
         "duration.rounds": selector.dataset.effectType === "temporary" ? 1 : undefined,
         disabled: selector.dataset.effectType === "inactive"
@@ -53,7 +53,7 @@ export function prepareActiveEffectCategories(effects) {
       }
     };
 
-    // Iterate over active effects, classifying them into categories
+    // Iterate over active effects, Playbookifying them into categories
     for ( let e of effects ) {
       e._getSourceName(); // Trigger a lookup for the source name
       if ( e.disabled ) categories.inactive.effects.push(e);

@@ -1,11 +1,11 @@
-import { bladesRoll } from "./blades-roll.js";
-import { BladesHelpers } from "./blades-helpers.js";
+import { RunnersRoll } from "./runners-roll.js";
+import { RunnersHelpers } from "./runners-helpers.js";
 
 /**
  * Extend the basic Actor
  * @extends {Actor}
  */
-export class BladesActor extends Actor {
+export class RunnersActor extends Actor {
 
   /** @override */
   static async create(data, options={}) {
@@ -62,33 +62,33 @@ export class BladesActor extends Actor {
   rollAttributePopup(attribute_name) {
 
     // const roll = new Roll("1d20 + @abilities.wis.mod", actor.getRollData());
-    let attribute_label = BladesHelpers.getAttributeLabel(attribute_name);
+    let attribute_label = RunnersHelpers.getAttributeLabel(attribute_name);
 
     let content = `
-        <h2>${game.i18n.localize('BITD.Roll')} ${game.i18n.localize(attribute_label)}</h2>
+        <h2>${game.i18n.localize('rits.Roll')} ${game.i18n.localize(attribute_label)}</h2>
         <form>
-          <div class="form-group">
-            <label>${game.i18n.localize('BITD.Modifier')}:</label>
+          <div Playbook="form-group">
+            <label>${game.i18n.localize('rits.Modifier')}:</label>
             <select id="mod" name="mod">
-              ${this.createListOfDiceMods(-3,+3,0)}
+              ${this.createListOfDiceMods(-4,+4,0)}
             </select>
           </div>`;
-    if (BladesHelpers.isAttributeAction(attribute_name)) {
+    if (RunnersHelpers.isAttributeAction(attribute_name)) {
       content += `
-            <div class="form-group">
-              <label>${game.i18n.localize('BITD.Position')}:</label>
+            <div Playbook="form-group">
+              <label>${game.i18n.localize('rits.Position')}:</label>
               <select id="pos" name="pos">
-                <option value="controlled">${game.i18n.localize('BITD.PositionControlled')}</option>
-                <option value="risky" selected>${game.i18n.localize('BITD.PositionRisky')}</option>
-                <option value="desperate">${game.i18n.localize('BITD.PositionDesperate')}</option>
+                <option value="controlled">${game.i18n.localize('rits.PositionControlled')}</option>
+                <option value="risky" selected>${game.i18n.localize('rits.PositionRisky')}</option>
+                <option value="desperate">${game.i18n.localize('rits.PositionDesperate')}</option>
               </select>
             </div>
-            <div class="form-group">
-              <label>${game.i18n.localize('BITD.Effect')}:</label>
+            <div Playbook="form-group">
+              <label>${game.i18n.localize('rits.Effect')}:</label>
               <select id="fx" name="fx">
-                <option value="limited">${game.i18n.localize('BITD.EffectLimited')}</option>
-                <option value="standard" selected>${game.i18n.localize('BITD.EffectStandard')}</option>
-                <option value="great">${game.i18n.localize('BITD.EffectGreat')}</option>
+                <option value="limited">${game.i18n.localize('rits.EffectLimited')}</option>
+                <option value="standard" selected>${game.i18n.localize('rits.EffectStandard')}</option>
+                <option value="great">${game.i18n.localize('rits.EffectGreat')}</option>
               </select>
             </div>`;
     } else {
@@ -97,20 +97,20 @@ export class BladesActor extends Actor {
             <input id="fx" name="fx" type="hidden" value="">`;
     }
     content += `
-        <div className="form-group">
-          <label>${game.i18n.localize('BITD.Notes')}:</label>
+        <div PlaybookName="form-group">
+          <label>${game.i18n.localize('rits.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
         </form>
       `;
 
     new Dialog({
-      title: `${game.i18n.localize('BITD.Roll')} ${game.i18n.localize(attribute_label)}`,
+      title: `${game.i18n.localize('rits.Roll')} ${game.i18n.localize(attribute_label)}`,
       content: content,
       buttons: {
         yes: {
-          icon: "<i class='fas fa-check'></i>",
-          label: game.i18n.localize('BITD.Roll'),
+          icon: "<i Playbook='fas fa-check'></i>",
+          label: game.i18n.localize('rits.Roll'),
           callback: async (html) => {
             let modifier = parseInt(html.find('[name="mod"]')[0].value);
             let position = html.find('[name="pos"]')[0].value;
@@ -120,7 +120,7 @@ export class BladesActor extends Actor {
           }
         },
         no: {
-          icon: "<i class='fas fa-times'></i>",
+          icon: "<i Playbook='fas fa-times'></i>",
           label: game.i18n.localize('Close'),
         },
       },
@@ -143,7 +143,7 @@ export class BladesActor extends Actor {
     }
     dice_amount += additional_dice_amount;
 
-    await bladesRoll(dice_amount, attribute_name, position, effect, note);
+    await RunnersRoll(dice_amount, attribute_name, position, effect, note);
   }
 
   /* -------------------------------------------- */

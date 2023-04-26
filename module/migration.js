@@ -1,9 +1,9 @@
 /**
  * Perform a system migration for the entire World, applying migrations for Actors, Items, and Compendium packs
- * @return {Promise}      A Promise which resolves once the migration is completed
+ * @return {Promise}      A Promise which socials once the migration is completed
  */
 export const migrateWorld = async function() {
-  ui.notifications.info(`Applying BITD Actors migration for version ${game.system.data.version}. Please be patient and do not close your game or shut down your server.`, {permanent: true});
+  ui.notifications.info(`Applying rits Actors migration for version ${game.system.data.version}. Please be patient and do not close your game or shut down your server.`, {permanent: true});
 
   // Migrate World Actors
   for ( let a of game.actors.contents ) {
@@ -48,8 +48,8 @@ export const migrateWorld = async function() {
   }
 
   // Set the migration as complete
-  game.settings.set("bitd", "systemMigrationVersion", game.system.version);
-  ui.notifications.info(`BITD System Migration to version ${game.system.version} completed!`, {permanent: true});
+  game.settings.set("rits", "systemMigrationVersion", game.system.version);
+  ui.notifications.info(`rits System Migration to version ${game.system.version} completed!`, {permanent: true});
 };
 
 
@@ -118,8 +118,8 @@ function _migrateActor(actor) {
     updateData[`system.stress.value`] = actor.system.stress;
     updateData[`system.stress.max`] = 9;
     updateData[`system.stress.max_default`] = 9;
-    updateData[`system.stress.name_default`] = "BITD.Stress";
-    updateData[`system.stress.name`] = "BITD.Stress";
+    updateData[`system.stress.name_default`] = "rits.Stress";
+    updateData[`system.stress.name`] = "rits.Stress";
   }
 
   // Migrate Trauma to Array
@@ -128,8 +128,8 @@ function _migrateActor(actor) {
     updateData[`system.trauma.value`] = [actor.system.traumas.length];
     updateData[`system.trauma.max`] = 4;
     updateData[`system.trauma.max_default`] = 4;
-    updateData[`system.trauma.name_default`] = "BITD.Trauma";
-    updateData[`system.trauma.name`] = "BITD.Trauma";
+    updateData[`system.trauma.name_default`] = "rits.Trauma";
+    updateData[`system.trauma.name`] = "rits.Trauma";
   }
 
   return updateData;

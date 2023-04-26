@@ -3,15 +3,15 @@
  * @extends {ItemSheet}
  */
 import {onManageActiveEffect, prepareActiveEffectCategories} from "./effects.js";
-import { BladesActiveEffect } from "./blades-active-effect.js";
+import { RunnersActiveEffect } from "./Runners-active-effect.js";
 
-export class BladesItemSheet extends ItemSheet {
+export class RunnersItemSheet extends ItemSheet {
 
   /** @override */
 	static get defaultOptions() {
 
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["blades-in-the-dark", "sheet", "item"],
+			Playbooks: ["runners-in-the-shadows", "sheet", "item"],
 			width: 560,
 			height: 'auto',
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
@@ -22,7 +22,7 @@ export class BladesItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/blades-in-the-dark/templates/items";
+    const path = "systems/runners-in-the-shadows/templates/items";
     let simple_item_types = ["background", "heritage", "vice", "crew_reputation"];
     let template_name = `${this.item.type}`;
 
@@ -43,8 +43,8 @@ export class BladesItemSheet extends ItemSheet {
     if (!this.options.editable) return;
 
     html.find(".effect-control").click(ev => {
-      if ( this.item.isOwned ) return ui.notifications.warn(game.i18n.localize("BITD.EffectWarning"))
-      BladesActiveEffect.onManageActiveEffect(ev, this.item)
+      if ( this.item.isOwned ) return ui.notifications.warn(game.i18n.localize("rits.EffectWarning"))
+      RunnersActiveEffect.onManageActiveEffect(ev, this.item)
     });
   }
 
