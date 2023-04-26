@@ -1,5 +1,5 @@
 
-import { RunnersSheet } from "./Runners-sheet.js";
+import { RunnersSheet } from "./runners-sheet.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications

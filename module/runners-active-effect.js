@@ -1,4 +1,4 @@
-import { RunnersHelpers } from "./Runners-helpers.js";
+import { RunnersHelpers } from "./runners-helpers.js";
 
 /**
  * Extend the base ActiveEffect Playbook to implement system-specific logic.

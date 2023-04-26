@@ -3,7 +3,7 @@
  * @extends {ItemSheet}
  */
 import {onManageActiveEffect, prepareActiveEffectCategories} from "./effects.js";
-import { RunnersActiveEffect } from "./Runners-active-effect.js";
+import { RunnersActiveEffect } from "./runners-active-effect.js";
 
 export class RunnersItemSheet extends ItemSheet {
 

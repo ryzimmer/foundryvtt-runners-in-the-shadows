@@ -1,6 +1,6 @@
 
-import { RunnersSheet } from "./Runners-sheet.js";
-import { RunnersActiveEffect } from "./Runners-active-effect.js";
+import { RunnersSheet } from "./runners-sheet.js";
+import { RunnersActiveEffect } from "./runners-active-effect.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
