@@ -76,7 +76,7 @@ Hooks.once("init", async function () {
   });
 
   Handlebars.registerHelper('check_crew_type', function (value, options) {
-      return true;
+      return value;
   });
 
   // Multiboxes.
