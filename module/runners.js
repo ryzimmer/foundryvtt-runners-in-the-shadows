@@ -75,10 +75,6 @@ Hooks.once("init", async function () {
     return Array.prototype.slice.call(arguments, 0, arguments.length - 1).some(Boolean);
   });
 
-  Handlebars.registerHelper('check_crew_type', function (value, options) {
-      return value;
-  });
-
   // Multiboxes.
   Handlebars.registerHelper('multiboxes', function (selected, options) {
 
