@@ -1,340 +1,432 @@
 <form class="{{cssclass}} actor-sheet" autocomplete="off">
 
-  <section id="character-{{_id}}-name-alias" class="flex-horizontal name-alias">
+    <section id="character-{{_id}}-name-alias" class="flex-horizontal name-alias">
 
-    <div class="grow-two">
-    <img src="{{img}}" data-edit="img" title="{{name}}" class="portrait" />
-    </div>
-
-    <div class="grow-two">
-      <div id="character-{{_id}}-name-box">
-        <label for="character-{{_id}}-name">{{localize "rits.Name"}}</label>
-        <input type="text" id="character-{{_id}}-name" class="name" name="name" value="{{name}}">
-      </div>
-
-      <div id="character-{{_id}}-traits" class="flex-column">
-
-        <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="heritage">{{localize "rits.Heritage"}}</a></div>
-          {{#each items as |item id|}}
-              {{#if (eq item.type "heritage")}}
-              <div class="item flex-horizontal" data-item-id="{{item._id}}">
-                <div class="item-body flex-horizontal">
-                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                  <div class="item-name">{{item.name}}</div>
-                </div>
-                <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-              </div>
-              {{/if}}
-          {{/each}}
+        <div class="grow-two">
+            <img src="{{img}}" data-edit="img" title="{{name}}" class="portrait" />
         </div>
 
-        <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="background">{{localize "rits.Background"}}</a></div>
-          {{#each items as |item id|}}
-            {{#if (eq item.type "background")}}
-            <div class="item flex-horizontal" data-item-id="{{item._id}}">
-              <div class="item-body flex-horizontal">
-                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                <div class="item-name">{{item.name}}</div>
-              </div>
-              <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+        <div class="grow-two">
+            <div id="character-{{_id}}-name-box">
+                <label for="character-{{_id}}-name">{{localize "rits.Name"}}</label>
+                <input type="text" id="character-{{_id}}-name" class="name" name="name" value="{{name}}">
             </div>
-            {{/if}}
-          {{/each}}
-        </div>
 
-        <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="vice">{{localize "rits.Vice"}}</a></div>
-          {{#each items as |item id|}}
-              {{#if (eq item.type "vice")}}
-              <div class="item flex-horizontal" data-item-id="{{item._id}}">
-                <div class="item-body flex-horizontal">
-                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                  <div class="item-name">{{item.name}}</div>
+            <div id="character-{{_id}}-traits" class="flex-column">
+
+                <div class="item-block flex-horizontal">
+                    <div class="item-class-label"><a class="item-add-popup" data-distinct="true"
+                            data-item-type="heritage">{{localize "rits.Heritage"}}</a></div>
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "heritage")}}
+                    <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                        <div class="item-body flex-horizontal">
+                            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                            <div class="item-name">{{item.name}}</div>
+                        </div>
+                        <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
                 </div>
-                <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-              </div>
-              {{/if}}
-          {{/each}}
-        </div>
 
-        <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="playbook">{{localize "rits.Playbook"}}</a></div>
-            {{#each items as |item id|}}
-                {{#if (eq item.type "Playbook")}}
-                <div class="item flex-horizontal" data-item-id="{{item._id}}">
-                  <div class="item-body flex-horizontal">
-                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                    <div class="item-name">{{item.name}}</div>
-                  </div>
-                  <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <div class="item-block flex-horizontal">
+                    <div class="item-class-label"><a class="item-add-popup" data-distinct="true"
+                            data-item-type="background">{{localize "rits.Background"}}</a></div>
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "background")}}
+                    <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                        <div class="item-body flex-horizontal">
+                            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                            <div class="item-name">{{item.name}}</div>
+                        </div>
+                        <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
                 </div>
-                {{/if}}
-            {{/each}}
-          </div>
 
-      </div>
-    </div>
+                <div class="item-block flex-horizontal">
+                    <div class="item-class-label"><a class="item-add-popup" data-distinct="true"
+                            data-item-type="vice">{{localize
+                            "rits.Vice"}}</a></div>
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "vice")}}
+                    <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                        <div class="item-body flex-horizontal">
+                            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                            <div class="item-name">{{item.name}}</div>
+                        </div>
+                        <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
 
-    <div class="grow-two">
-      <div id="character-{{_id}}-alias-box">
-        <label for="character-{{_id}}-alias">{{localize "rits.Alias"}}</label>
-        <input type="text" id="character-{{_id}}-alias" class="alias" name="system.alias" value="{{system.alias}}">
-      </div>
+                <div class="item-block flex-horizontal">
+                    <div class="item-class-label"><a class="item-add-popup" data-distinct="true"
+                            data-item-type="playbook">{{localize "rits.Playbook"}}</a></div>
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "Playbook")}}
+                    <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                        <div class="item-body flex-horizontal">
+                            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                            <div class="item-name">{{item.name}}</div>
+                        </div>
+                        <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
 
-      {{> "systems/runners-in-the-shadows/templates/parts/nuyen.html" actor=actor}}
-    </div>
-
-  </section>
-
-  {{!-- Experience --}}
-  <section class="flex experience">
-  </section>
-  {{!-- Stress and Trauma --}}
-  <div id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
-    <div id="character-{{_id}}-stress" class="big-teeth character-stress">
-      {{#multiboxes system.stress.value}}
-
-      <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
-      <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
-
-      {{#times_from_1 system.stress.max}}
-        <input type="radio" id="character-{{../_id}}-stress-{{this}}" name="system.stress.value" value="{{this}}"
-               dtype="Radio">
-        <label for="character-{{../_id}}-stress-{{this}}"></label>
-      {{/times_from_1}}
-
-      {{/multiboxes}}
-
-    </div>
-    <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
-      {{#traumacounter system.trauma.list}}
-      <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
-        <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>
-        <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
-          <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
-
-          {{#times_from_1 system.trauma.max}}
-            <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value" value="{{this}}" disabled>
-            <label for="character-{{../_id}}-trauma-counter-{{this}}"></label>
-          {{/times_from_1}}
+            </div>
         </div>
-      </div>
-      {{/traumacounter}}
-    </div>
 
-    <div id="character-{{_id}}-trauma-list" class="trauma-list">
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.cold" value="cold" {{checked system.trauma.list.cold}}>
-        <span class="checkmark">{{localize "rits.TraumaCold"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.haunted" value="haunted" {{checked system.trauma.list.haunted}}>
-        <span class="checkmark">{{localize "rits.TraumaHaunted"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.obsessed" value="obsessed" {{checked system.trauma.list.obsessed}}>
-        <span class="checkmark">{{localize "rits.TraumaObsessed"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.paranoid" value="paranoid" {{checked system.trauma.list.paranoid}}>
-        <span class="checkmark">{{localize "rits.TraumaParanoid"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.reckless" value="reckless" {{checked system.trauma.list.reckless}}>
-        <span class="checkmark">{{localize "rits.TraumaReckless"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.soft" value="soft" {{checked system.trauma.list.soft}}>
-        <span class="checkmark">{{localize "rits.TraumaSoft"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.unstable" value="unstable" {{checked system.trauma.list.unstable}}>
-        <span class="checkmark">{{localize "rits.TraumaUnstable"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.vicious" value="vicious" {{checked system.trauma.list.vicious}}>
-        <span class="checkmark">{{localize "rits.TraumaVicious"}}</span>
-      </label>
-    </div>
+        <div class="grow-two">
+            <div id="character-{{_id}}-alias-box">
+                <label for="character-{{_id}}-alias">{{localize "rits.Alias"}}</label>
+                <input type="text" id="character-{{_id}}-alias" class="alias" name="system.alias"
+                    value="{{system.alias}}">
+            </div>
 
-  </div>
+            {{> "systems/runners-in-the-shadows/templates/parts/nuyen.html" actor=actor}}
+        </div>
 
-  {{!-- Harm, Healing and Armor --}}
-  <section id="character-{{_id}}-harm-armor" class="flex harm-armor">
-    <div id="character-{{_id}}-character-harm" class="character-harm">
-      <table>
-        <thead>
-          <th class="black-white" colspan="4">{{localize "rits.Harm"}}</th>
-          <th class="black-white"><label>{{localize "rits.Healing"}}</label></th>
-          <th class="black-white">{{localize "rits.Armor"}}</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3</td>
-            <td colspan="2">
-              <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.heavy.one" value="{{system.harm.heavy.one}}">
-            </td>
-            <td>{{localize "rits.NeedHelp"}}</td>
-            <td rowspan="3">
-              <div id="character-{{_id}}-health-clock" class="character-health-clock">
-                {{{runners-clock "system.healing-clock" 4 system.healing-clock _id}}}
-              </div>
-            </td>
-            <td rowspan="3" id="character-{{_id}}-armor-uses" class="character-armor-uses">
-              <div>
-                <label for="character-{{_id}}-armor-uses-armor">{{localize "rits.Armor"}}</label>
-                <input id="character-{{_id}}-armor-uses-armor" type="checkbox" name="system.armor-uses.armor" {{checked system.armor-uses.armor}}>
-              </div>
-              <div>
-                <label for="character-{{_id}}-armor-uses-heavy">{{localize "rits.Heavy"}}</label>
-                <input id="character-{{_id}}-armor-uses-heavy" type="checkbox" name="system.armor-uses.heavy" {{checked system.armor-uses.heavy}}>
-              </div>
-              <div>
-                <label for="character-{{_id}}-armor-uses-special">{{localize "rits.Special"}}</label>
-                <input id="character-{{_id}}-armor-uses-special" type="checkbox" name="system.armor-uses.special" {{checked system.armor-uses.special}}>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
-            </td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
-            </td>
-            <td>-1D</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
-            </td>
-            <td>
-              <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
-            </td>
-            <td>{{localize "rits.LessEffect"}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    </section>
 
+    {{!-- Experience --}}
+    <section class="flex experience">
+    </section>
+    {{!-- Stress and Trauma --}}
+    <div id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
+        <div id="character-{{_id}}-stress" class="big-teeth character-stress">
+            {{#multiboxes system.stress.value}}
 
+            <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
+            <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
 
-
-  {{!-- Attributes --}}
-  <section class="flex-horizontal">
-
-    <div class="tab-content flex-vertical grow-two">
-
-      {{!-- Nav menu --}}
-      <nav class="tabs flex-horizontal">
-        <a class="item" data-tab="abilities">{{localize "rits.Abilities"}}</a>
-        <a class="item" data-tab="loadout">{{localize "rits.Loadout"}}</a>
-        <a class="item" data-tab="character-notes">{{localize "rits.Notes"}}</a>
-        {{#if isGM}}
-          <a class="item" data-tab="effects">{{localize "rits.Effects"}}</a>
-        {{/if}}
-        <a class="item" data-tab="all-character-items">{{localize "rits.AllItems"}}</a>
-      </nav>
-
-      <div id="character-{{_id}}-abilities" class="tab flex-vertical abilities" data-tab="abilities">
-        <div class="label-stripe">
-          <p><label for="character-{{_id}}-experience-0">{{localize "rits.Abilities"}}</label></p>
-          <p><a class="item-add-popup" data-item-type="ability"><i class="fas fa-plus-square"></i></a></p>
-          <div id="character-{{_id}}-experience" class="teeth-experience">
-            <label for="character-{{_id}}-experience-0"><i class="fab fa-creative-commons-zero nullifier"></i></label>
-            {{#multiboxes system.experience}}
-            <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0" dtype="Radio">
-            {{#times_from_1 system.experience_max}}
-            <input type="radio" id="character-{{_id}}-experience-{{this}}" name="system.experience" value="{{this}}" dtype="Radio">
-            <label for="character-{{_id}}-experience-{{this}}"></label>
+            {{#times_from_1 system.stress.max}}
+            <input type="radio" id="character-{{../_id}}-stress-{{this}}" name="system.stress.value" value="{{this}}"
+                dtype="Radio">
+            <label for="character-{{../_id}}-stress-{{this}}"></label>
             {{/times_from_1}}
+
             {{/multiboxes}}
-          </div>
-        </div>
 
-        <div id="character-{{_id}}-abilities-list">
-          {{#each items as |item id|}}
-          {{#if (eq item.type "ability")}}
-            <div class="item flex-horizontal" data-item-id="{{item._id}}">
-              <div class="item-body flex-horizontal">
-                <b><div class="item-name">{{item.name}}</div></b>
-                <div class="item-description">{{{item.system.description}}}</div>
-              </div>
-              <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+        </div>
+        <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
+            {{#traumacounter system.trauma.list}}
+            <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
+                <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize
+                    system.trauma.name}}</label>
+                <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
+                    <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
+
+                    {{#times_from_1 system.trauma.max}}
+                    <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value"
+                        value="{{this}}" disabled>
+                    <label for="character-{{../_id}}-trauma-counter-{{this}}"></label>
+                    {{/times_from_1}}
+                </div>
             </div>
-          {{/if}}
-          {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize "rits.AddAbility"}}</a></div>
+            {{/traumacounter}}
         </div>
-      </div>
 
-      {{!-- Owned Items Tab --}}
-      <div id="character-{{_id}}-loadout" class="tab flex-vertical loadout" data-tab="loadout">
-        <div class="label-stripe flex-horizontal">
-           <p>{{localize "rits.Loadout"}} <a class="item-add-popup" data-item-type="item"><i class="fas fa-plus-square"></i></a></p>
-           <p>{{system.loadout}}/{{localize system.load_level}} </p>
-           <div class="dropdown">
-             <select name="system.selected_load_level">
-               {{selectOptions system.load_levels selected=system.selected_load_level localize=true}}
-             </select>
-           </div>
+        <div id="character-{{_id}}-trauma-list" class="trauma-list">
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.cold" value="cold" {{checked
+                    system.trauma.list.cold}}>
+                <span class="checkmark">{{localize "rits.TraumaCold"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.haunted" value="haunted" {{checked
+                    system.trauma.list.haunted}}>
+                <span class="checkmark">{{localize "rits.TraumaHaunted"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.obsessed" value="obsessed"
+                    {{checked system.trauma.list.obsessed}}>
+                <span class="checkmark">{{localize "rits.TraumaObsessed"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.paranoid" value="paranoid"
+                    {{checked system.trauma.list.paranoid}}>
+                <span class="checkmark">{{localize "rits.TraumaParanoid"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.reckless" value="reckless"
+                    {{checked system.trauma.list.reckless}}>
+                <span class="checkmark">{{localize "rits.TraumaReckless"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.soft" value="soft" {{checked
+                    system.trauma.list.soft}}>
+                <span class="checkmark">{{localize "rits.TraumaSoft"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.unstable" value="unstable"
+                    {{checked system.trauma.list.unstable}}>
+                <span class="checkmark">{{localize "rits.TraumaUnstable"}}</span>
+            </label>
+            <label>
+                <input type="checkbox" data-dType="Boolean" name="system.trauma.list.vicious" value="vicious" {{checked
+                    system.trauma.list.vicious}}>
+                <span class="checkmark">{{localize "rits.TraumaVicious"}}</span>
+            </label>
         </div>
-        <div>
-          {{#each items as |item id|}}
-          {{#if (eq item.type "item")}}
-            <div class="item flex-horizontal" data-item-id="{{item._id}}">
-              <div class="item-body flex-horizontal">
-                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-                <div class="item-name">{{item.name}}</div>
-                <div class="item-description">{{{item.system.description}}}</div>
-              </div>
-              <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-            </div>
-          {{/if}}
-          {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="item">{{localize "rits.AddItem"}}</a></div>
-        </div>
-      </div>
-
-      <div class="tab flex-vertical" data-tab="character-notes">
-        <div class="label-stripe">
-          <p>{{localize "rits.Notes"}}</p>
-        </div>
-        <textarea rows="13" name="system.description">{{{system.description}}}</textarea>
-      </div>
-
-      {{!-- Active Effects --}}
-      <div id="character-{{_id}}-effects" class="tab effects flex-vertical" data-tab="effects">
-        <div class="label-stripe">
-          <p>{{localize "rits.Effects"}}</p>
-        </div>
-        {{> "systems/runners-in-the-shadows/templates/parts/active-effects.html"}}
-      </div>
-
-      {{!-- Full Item List --}}
-      <div class="tab grow-two flex-vertical" data-tab="all-character-items">
-        <div class="label-stripe">
-          <p><label>{{localize "rits.AllItems"}}</label></p>
-        </div>
-        {{#each items as |item id|}}
-        <div class="item flex-horizontal" data-item-id="{{item._id}}">
-          <div class="item-body item-sheet-open flex-horizontal">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-            <div class="item-name">{{item.name}}</div>
-          </div>
-          <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-        </div>
-        {{/each}}
-      </div>
 
     </div>
+
+    {{!-- Harm, Healing and Armor --}}
+    <section id="character-{{_id}}-harm-armor" class="flex harm-armor">
+        <div id="character-{{_id}}-character-harm" class="character-harm">
+            <table>
+                <thead>
+                    <th class="black-white" colspan="4">{{localize "rits.Harm"}}</th>
+                    <th class="black-white"><label>{{localize "rits.Healing"}}</label></th>
+                    <th class="black-white">{{localize "rits.Armor"}}</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="2">
+                            <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.heavy.one"
+                                value="{{system.harm.heavy.one}}">
+                        </td>
+                        <td>{{localize "rits.NeedHelp"}}</td>
+                        <td rowspan="3">
+                            <div id="character-{{_id}}-health-clock" class="character-health-clock">
+                                {{{runners-clock "system.healing-clock" 4 system.healing-clock _id}}}
+                            </div>
+                        </td>
+                        <td rowspan="3" id="character-{{_id}}-armor-uses" class="character-armor-uses">
+                            <div>
+                                <label for="character-{{_id}}-armor-uses-armor">{{localize "rits.Armor"}}</label>
+                                <input id="character-{{_id}}-armor-uses-armor" type="checkbox"
+                                    name="system.armor-uses.armor" {{checked system.armor-uses.armor}}>
+                            </div>
+                            <div>
+                                <label for="character-{{_id}}-armor-uses-heavy">{{localize "rits.Heavy"}}</label>
+                                <input id="character-{{_id}}-armor-uses-heavy" type="checkbox"
+                                    name="system.armor-uses.heavy" {{checked system.armor-uses.heavy}}>
+                            </div>
+                            <div>
+                                <label for="character-{{_id}}-armor-uses-special">{{localize "rits.Special"}}</label>
+                                <input id="character-{{_id}}-armor-uses-special" type="checkbox"
+                                    name="system.armor-uses.special" {{checked system.armor-uses.special}}>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one"
+                                value="{{system.harm.medium.one}}">
+                        </td>
+                        <td>
+                            <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two"
+                                value="{{system.harm.medium.two}}">
+                        </td>
+                        <td>-1D</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one"
+                                value="{{system.harm.light.one}}">
+                        </td>
+                        <td>
+                            <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two"
+                                value="{{system.harm.light.two}}">
+                        </td>
+                        <td>{{localize "rits.LessEffect"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+
+
     {{!-- Attributes --}}
-    {{> "systems/runners-in-the-shadows/templates/parts/attributes.html" actor=actor}}
-  </section>
+    <section class="flex-horizontal">
+
+        <div class="tab-content flex-vertical grow-two">
+
+            {{!-- Nav menu --}}
+            <nav class="tabs flex-horizontal">
+                <a class="item" data-tab="abilities">{{localize "rits.Abilities"}}</a>
+                <a class="item" data-tab="loadout">{{localize "rits.Loadout"}}</a>
+                <a class="item" data-tab="character-notes">{{localize "rits.Notes"}}</a>
+                {{#if isGM}}
+                <a class="item" data-tab="effects">{{localize "rits.Effects"}}</a>
+                {{/if}}
+                <a class="item" data-tab="all-character-items">{{localize "rits.AllItems"}}</a>
+            </nav>
+
+            <div id="abilities" class="tab flex-vertical" data-tab="abilities">
+                <div class="label-stripe">
+                    <p><label for="character-{{_id}}-experience-0">{{localize "rits.Abilities"}}</label>
+                        <a class="item-add-popup" data-item-type="ability" data-limiter="{{system.character_class}}"><i
+                                class="fas fa-plus-square"></i></a>
+                    </p>
+                    <div id="character-experience" class="teeth-experience tooltip">
+                        <label for="character-{{_id}}-experience-0">{{localize "rits.PExperience"}}<i
+                                class="fab fa-creative-commons-zero nullifier"></i>
+                            <span class="tooltiptext left">{{localize
+                                "rits.PlaybookExpClueDescription"}}<br />{{localize
+                                "rits.PlaybookExpClue2"}}<br />{{localize "rits.PlaybookExpClue3"}}<br />
+                                {{#each items as |item|}}
+                                {{#if (eq item.type "Playbook")}}
+                                {{item.system.experience_clues}}
+                                {{/if}}
+                                {{/each}}
+                            </span>
+                        </label>
+                        {{#multiboxes system.experience}}
+                        <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0"
+                            dtype="Radio">
+                        {{#times_from_1 system.experienceMax}}
+                        <input type="radio" id="character-{{../_id}}-experience-{{this}}" name="system.experience"
+                            value="{{this}}" dtype="Radio">
+                        <label for="character-{{../_id}}-experience-{{this}}"></label>
+                        {{/times_from_1}}
+                        {{/multiboxes}}
+                    </div>
+                </div>
+
+                <div id="character-{{_id}}-abilities-list">
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "ability")}}
+                    <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                        <div class="item-body flex-horizontal">
+                            <b>
+                                <div class="item-name">{{item.name}}</div>
+                            </b>
+                            <div class="item-description">{{{item.system.description}}}</div>
+                        </div>
+                        <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize
+                            "rits.AddAbility"}}</a></div>
+                </div>
+            </div>
+
+            {{!-- Owned Items Tab --}}
+            <div id="character-{{_id}}-loadout" class="tab flex-vertical loadout" data-tab="loadout">
+                <div class="label-stripe flex-horizontal">
+                    <p>{{localize "rits.Loadout"}} <a class="item-add-popup" data-item-type="item"><i
+                                class="fas fa-plus-square"></i></a></p>
+                    <p>{{system.loadout}}/{{localize system.load_level}} </p>
+                    <div class="dropdown">
+                        <select name="system.selected_load_level">
+                            {{selectOptions system.load_levels selected=system.selected_load_level localize=true}}
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "item")}}
+                    <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                        <div class="item-body flex-horizontal">
+                            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                            <div class="item-name">{{item.name}}</div>
+                            <div class="item-description">{{{item.system.description}}}</div>
+                        </div>
+                        <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    <div class="item-class-label"><a class="item-add-popup" data-item-type="item">{{localize
+                            "rits.AddItem"}}</a>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- Friends Tab --}}
+            <div id="friends" class="tab flex-vertical" data-tab="friends">
+                <div class="label-stripe">
+                    <p>{{localize "BITD.Friends"}}
+                        <a class="item-add-popup" data-item-type="friend"><i class="fas fa-plus-square"></i></a>
+                    </p>
+                </div>
+                <div id="friend-list">
+                    {{#each items as |item id|}}
+                    {{#if (eq item.type "npc")}}
+                    <div class="friend-tracker">
+                        {{#multiboxes item.system.status.value}}
+                        <input class="update-box" data-utype="status" data-item="{{item._id}}" data-value="0"
+                            type="radio" id="friend-{{item._id}}-status-0" value="0" dtype="Radio">
+                        <label for="friend-{{item._id}}-status-0"></label>
+                        <input class="update-box" data-utype="status" data-item="{{item._id}}" data-value="1"
+                            type="radio" id="friend-{{item._id}}-status-1" value="1" dtype="Radio">
+                        <label for="friend-{{item._id}}-status-1"></label>
+                        <input class="update-box" data-utype="status" data-item="{{item._id}}" data-value="2"
+                            type="radio" id="friend-{{item._id}}-status-2" value="2" dtype="Radio">
+                        <label for="friend-{{item._id}}-status-2"></label>
+                        {{/multiboxes}}
+                        <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                            <div class="item-body flex-horizontal">
+                                {{!--<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />--}}
+                                <a class="item-name">{{item.name}}</a>
+                                <div class="item-description">{{{item.system.description}}}</div>
+                            </div>
+                            <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                                    class="fas fa-trash"></i></a>
+                            <a class="item-control item-post" title="{{localize 'rits.TitlePostItem'}}"><i
+                                    class="fas fa-comment"></i></a>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    <div class="item-class-label"><a class="item-add-popup" data-item-type="friend">{{localize "rits.AddFriend"}}</a></div>
+                </div>
+            </div>
+
+            <div class="tab flex-vertical" data-tab="character-notes">
+                <div class="label-stripe">
+                    <p>{{localize "rits.Notes"}}</p>
+                </div>
+                <textarea rows="13" name="system.description">{{{system.description}}}</textarea>
+            </div>
+
+            {{!-- Active Effects --}}
+            <div id="character-{{_id}}-effects" class="tab effects flex-vertical" data-tab="effects">
+                <div class="label-stripe">
+                    <p>{{localize "rits.Effects"}}</p>
+                </div>
+                {{> "systems/runners-in-the-shadows/templates/parts/active-effects.html"}}
+            </div>
+
+            {{!-- Full Item List --}}
+            <div class="tab grow-two flex-vertical" data-tab="all-character-items">
+                <div class="label-stripe">
+                    <p><label>{{localize "rits.AllItems"}}</label></p>
+                </div>
+                {{#each items as |item id|}}
+                <div class="item flex-horizontal" data-item-id="{{item._id}}">
+                    <div class="item-body item-sheet-open flex-horizontal">
+                        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                        <div class="item-name">{{item.name}}</div>
+                    </div>
+                    <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
+                            class="fas fa-trash"></i></a>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+        {{!-- Attributes --}}
+        {{> "systems/runners-in-the-shadows/templates/parts/attributes.html" actor=actor}}
+    </section>
 
 </form>

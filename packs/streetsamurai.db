@@ -1,0 +1,182 @@
+{
+    "name": "Unstoppable",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You can push yourself to perform a feat of physical force that verges on the superhuman or engage a small gang on equal footing in close combat.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Wrecking Crew",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Your strength and ferocity are infamous. When striking in melee, you gain +1d. Whenever you spend Karma in combat, you also gain +1 effect on that action.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Battleborn",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You may expend your special armor to reduce harm from an attack in combat, or to push yourself during a fight.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Bodyguard",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you protect a crewmate, resist with +1d. When you take harm, clear 1 stress.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Flesh Wound",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "If you’re wounded at the beginning of downtime, mark +3 segments on your healing clock. When you push yourself to ignore wound penalties, you take only 1 stress (not 2).",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "When The Chips Are Down",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You gain a second use of special armor between each downtime.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Predator",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Take +1d to rolls against weakened or vulnerable targets. Whenever you gather information on a weakness or vulnerability, the worst you can get is a 4/5 result.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Scary",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You have an air of menace and danger obvious to even the most unobservant. You gain +1 effect when trying to intimidate someone. If done immediately after a show of force, also take +1d.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Daredevil",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you make a desperate roll, you may take +1d. If you do so, do not mark xp in that action’s attribute.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Veteran",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Choose a special ability from another playbook. This may be taken 3 times.",
+        "Playbook": "Street Samurai",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Fine Heavy Weapon",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Street Samurai",
+        "load": "2",
+        "description": "Can do some considerable damage to vehicles and things like unshielded doors. Has about a dozen shots. Will do serious and messy harm to people. Probably illegal"
+    },
+    "flags": {}
+}
+{
+    "name": "Fine Melee Weapon",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Street Samurai",
+        "load": "1",
+        "description": "Sharp. Blunt. Pointy. Stabby. Slicy. All different sizes. Some come with laser edges. Some vibrate…ooh. Batteries included"
+    },
+    "flags": {}
+}
+{
+    "name": "Magical Ammunition",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Street Samurai",
+        "load": "0",
+        "description": "Ammo for your weapon that has been enchanted"
+    },
+    "flags": {}
+}
+{
+    "name": "Detonation Launcher",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Street Samurai",
+        "load": "2",
+        "description": "A really big explosive. Good for making big booms and leaving nothing left. This is super illegal. Take 2 heat for firing it."
+    },
+    "flags": {}
+}

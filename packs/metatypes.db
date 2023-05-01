@@ -1,0 +1,72 @@
+{
+    "name": "Human",
+    "permission": {
+        "default": 0
+    },
+    "type": "heritage",
+    "system": {
+        "description": "Those with a human metatype are the first metatype historically. Humans are the majority of the population. They control most of the important and wealthy positions in society."
+    },
+    "sort": 10000,
+    "flags": {}
+}
+{
+    "name": "Elf",
+    "permission": {
+        "default": 0
+    },
+    "type": "heritage",
+    "system": {
+        "description": "Elves are one of the more common metatypes and the best accepted metahuman. They are one of the more attractive metatypes and are considered the luckiest metahumans."
+    },
+    "sort": 20000,
+    "flags": {}
+}
+{
+    "name": "Dwarf",
+    "permission": {
+        "default": 0
+    },
+    "type": "heritage",
+    "system": {
+        "description": "Dwarves are the smallest of the metahumans. They tend to have a larger upper body than lower body proportional to humans."
+    },
+    "sort": 30000,
+    "flags": {}
+}
+{
+    "name": "Ork",
+    "permission": {
+        "default": 0
+    },
+    "type": "heritage",
+    "system": {
+        "description": "Orks are the most common metahuman type, but also the least socially accepted. Most people treat them as outsiders. Orks tend to be the size of a large human."
+    },
+    "sort": 40000,
+    "flags": {}
+}
+{
+    "name": "Troll",
+    "permission": {
+        "default": 0
+    },
+    "type": "heritage",
+    "system": {
+        "description": "Trolls are one of the less common metahuman types. They are larger than the largest humans and tend to have tusks or horns."
+    },
+    "sort": 50000,
+    "flags": {}
+}
+{
+    "name": "Other",
+    "permission": {
+        "default": 0
+    },
+    "type": "heritage",
+    "system": {
+        "description": "Some other metatype."
+    },
+    "sort": 100000,
+    "flags": {}
+}

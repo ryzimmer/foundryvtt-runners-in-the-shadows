@@ -1,0 +1,182 @@
+{
+    "name": "Enchantment",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you make a skill check, you may spend Karma to use Artifice instead of that skill.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Energy-Blade",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You can focus magical energy into your melee weapon. While charged, the weapon can cut through materials with ease, and you gain potency on your melee attacks.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Warded",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You may expend your special armor to resist the consequences of a magical attack or artifact use, or push yourself when using magical powers.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Side Projects",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You gain an extra downtime activity to work on a long term project involving creating or modifying an artifact.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Never Tell Me The Odds",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You generate Karma on desperate rolls. You may also generate Karma even if you spent Karma.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Tenacious",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Penalties from harm are one level less severe. (4 harm is still lethal).",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Generalist",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you take this ability, you can choose a skill that you have no skill points in and add 1 skill point to it. Whenever you spend Karma, you can choose a new skill that you have no points in and move the skill point to that skill.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Artificer",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you invent or craft an artifact with magical properties, take +1 result level to your roll. You begin with one special design already known.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Analyst",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "During downtime, you get two ticks to distribute among any long term project clocks that involve investigation or learning a new formula or design plan.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Veteran",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Choose a special ability from another playbook. This may be taken 3 times.",
+        "Playbook": "Adept",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Magical reagents kit",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Adept",
+        "load": "1",
+        "description": "Spare parts for enchanting items"
+    },
+    "flags": {}
+}
+{
+    "name": "Magical focus",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Adept",
+        "load": "0",
+        "description": "An item you can use to channel your powers"
+    },
+    "flags": {}
+}
+{
+    "name": "Magical tattoo",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Adept",
+        "load": "1",
+        "description": "Supplies needed to create a magical tattoo (tattoos are foci that are hard to disarm)"
+    },
+    "flags": {}
+}
+{
+    "name": "Warding amulet",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Adept",
+        "load": "0",
+        "description": "An object that acts as anathema for spirits"
+    },
+    "flags": {}
+}

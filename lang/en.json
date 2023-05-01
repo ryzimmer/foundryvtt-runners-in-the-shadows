@@ -1,7 +1,7 @@
 {
-  "rits.HelloThere": "General Kenobi",
   "rits.Heritage": "Heritage",
   "rits.Background": "Background",
+  "rits.TitlePostItem": "Post item",
   "rits.TitleDeleteItem": "Delete item",
   "rits.Vice": "Vice",
   "rits.Playbook": "Playbook",
@@ -223,6 +223,7 @@
   "rits.EffectEdit": "Edit Effect",
   "rits.EffectDelete": "Delete Effect",
   "rits.EffectWarning": "Managing Active Effects within an Owned Item is not currently supported by FoundryVTT and will be added in a subsequent update.",
+  "rits.AddFriend": "Add Friend",
 
   "rits.Name": "Name",
   "rits.CampaignName": "Campaign Name",

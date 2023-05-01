@@ -25,14 +25,14 @@ window.RunnersHelpers = RunnersHelpers;
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
-Hooks.once("init", async function() {
+Hooks.once("init", async function () {
   console.log(`Initializing Runners in the Shadows System`);
 
   game.Runners = {
     dice: RunnersRoll
   };
   game.system.RunnersClocks = {
-    sizes: [ 4, 6, 8 ]
+    sizes: [4, 6, 8]
   };
 
   CONFIG.Item.documentClass = RunnersItem;
@@ -50,14 +50,14 @@ Hooks.once("init", async function() {
   Actors.registerSheet("Runners", RunnersClockSheet, { types: ["\uD83D\uDD5B clock"], makeDefault: true });
   Actors.registerSheet("Runners", RunnersNPCSheet, { types: ["npc"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("Runners", RunnersItemSheet, {makeDefault: true});
+  Items.registerSheet("Runners", RunnersItemSheet, { makeDefault: true });
   await preloadHandlebarsTemplates();
 
   Actors.registeredSheets.forEach(element => console.log(element.Actor.name));
 
 
   // Is the value Turf side.
-  Handlebars.registerHelper('is_turf_side', function(value, options) {
+  Handlebars.registerHelper('is_turf_side', function (value, options) {
     if (["left", "right", "top", "bottom"].includes(value)) {
       return options.fn(this);
     } else {
@@ -65,13 +65,27 @@ Hooks.once("init", async function() {
     }
   });
 
+  Handlebars.registerHelper('and', function () {
+    // Get function args and remove last one (meta object); every(Boolean) checks AND
+    return Array.prototype.slice.call(arguments, 0, arguments.length - 1).every(Boolean);
+  });
+
+  Handlebars.registerHelper('or', function () {
+    // Get function args and remove last one (meta object); every(Boolean) checks AND
+    return Array.prototype.slice.call(arguments, 0, arguments.length - 1).some(Boolean);
+  });
+
+  Handlebars.registerHelper('check_crew_type', function (value, options) {
+      return true;
+  });
+
   // Multiboxes.
-  Handlebars.registerHelper('multiboxes', function(selected, options) {
+  Handlebars.registerHelper('multiboxes', function (selected, options) {
 
     let html = options.fn(this);
 
     // Fix for single non-array values.
-    if ( !Array.isArray(selected) ) {
+    if (!Array.isArray(selected)) {
       selected = [selected];
     }
 
@@ -82,7 +96,7 @@ Hooks.once("init", async function() {
           let rgx = new RegExp(' value=\"' + escapedValue + '\"');
           let oldHtml = html;
           html = html.replace(rgx, "$& checked");
-          while( ( oldHtml === html ) && ( escapedValue >= 0 ) ){
+          while ((oldHtml === html) && (escapedValue >= 0)) {
             escapedValue--;
             rgx = new RegExp(' value=\"' + escapedValue + '\"');
             html = html.replace(rgx, "$& checked");
@@ -94,7 +108,7 @@ Hooks.once("init", async function() {
   });
 
   // Trauma Counter
-  Handlebars.registerHelper('traumacounter', function(selected, options) {
+  Handlebars.registerHelper('traumacounter', function (selected, options) {
 
     let html = options.fn(this);
 
@@ -171,7 +185,7 @@ Hooks.once("init", async function() {
   // {{#times_from_1 10}}
   //   <span>{{this}}</span>
   // {{/times_from_1}}
-  Handlebars.registerHelper('times_from_1', function(n, block) {
+  Handlebars.registerHelper('times_from_1', function (n, block) {
 
     var accum = '';
     for (var i = 1; i <= n; ++i) {
@@ -187,7 +201,7 @@ Hooks.once("init", async function() {
   // {{#times_from_0 10}}
   //   <span>{{this}}</span>
   // {{/times_from_0}}
-  Handlebars.registerHelper('times_from_0', function(n, block) {
+  Handlebars.registerHelper('times_from_0', function (n, block) {
 
     var accum = '';
     for (var i = 0; i <= n; ++i) {
@@ -199,12 +213,12 @@ Hooks.once("init", async function() {
   // Concat helper
   // https://gist.github.com/adg29/f312d6fab93652944a8a1026142491b1
   // Usage: (concat 'first 'second')
-  Handlebars.registerHelper('concat', function() {
+  Handlebars.registerHelper('concat', function () {
     var outStr = '';
-    for(var arg in arguments){
-        if(typeof arguments[arg]!='object'){
-            outStr += arguments[arg];
-        }
+    for (var arg in arguments) {
+      if (typeof arguments[arg] != 'object') {
+        outStr += arguments[arg];
+      }
     }
     return outStr;
   });
@@ -215,7 +229,7 @@ Hooks.once("init", async function() {
    * Takes label from Selected option instead of just plain value.
    */
 
-  Handlebars.registerHelper('selectOptionsWithLabel', function(choices, options) {
+  Handlebars.registerHelper('selectOptionsWithLabel', function (choices, options) {
 
     const localize = options.hash['localize'] ?? false;
     let selected = options.hash['selected'] ?? null;
@@ -224,14 +238,14 @@ Hooks.once("init", async function() {
 
     // Create an option
     const option = (key, object) => {
-      if ( localize ) object.label = game.i18n.localize(object.label);
+      if (localize) object.label = game.i18n.localize(object.label);
       let isSelected = selected.includes(key);
       html += `<option value="${key}" ${isSelected ? "selected" : ""}>${object.label}</option>`
     };
 
     // Create the options
     let html = "";
-    if ( blank ) option("", blank);
+    if (blank) option("", blank);
     Object.entries(choices).forEach(e => option(...e));
 
     return new Handlebars.SafeString(html);
@@ -242,7 +256,7 @@ Hooks.once("init", async function() {
    * Create appropriate Runners clock
    */
 
-  Handlebars.registerHelper('runners-clock', function(parameter_name, type, current_value, uniq_id) {
+  Handlebars.registerHelper('runners-clock', function (parameter_name, type, current_value, uniq_id) {
 
     let html = '';
 
@@ -278,7 +292,7 @@ Hooks.once("init", async function() {
 /**
  * Once the entire VTT framework is initialized, check to see if we should perform a data migration
  */
-Hooks.once("ready", function() {
+Hooks.once("ready", function () {
 
   // Determine whether a system migration is required
   const currentVersion = game.settings.get("rits", "systemMigrationVersion");
@@ -287,7 +301,7 @@ Hooks.once("ready", function() {
   let needMigration = (currentVersion < NEEDS_MIGRATION_VERSION) || (currentVersion === null);
 
   // Perform the migration
-  if ( needMigration && game.user.isGM ) {
+  if (needMigration && game.user.isGM) {
     migrations.migrateWorld();
   }
 });
@@ -299,9 +313,9 @@ Hooks.once("ready", function() {
 // getSceneControlButtons
 Hooks.on("renderSceneControls", async (app, html) => {
   let dice_roller = $('<li class="scene-control" title="Dice Roll"><i class="fas fa-dice"></i></li>');
-  dice_roller.click( async function() {
+  dice_roller.click(async function () {
     await simpleRollPopup();
   });
-  html.children().first().append( dice_roller );
+  html.children().first().append(dice_roller);
 
 });

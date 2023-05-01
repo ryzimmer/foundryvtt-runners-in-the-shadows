@@ -1,0 +1,182 @@
+{
+    "name": "Programming On The Fly",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You can adapt your programs to specific security measures. When you fail on a Hack roll while in the Matrix, the next hack roll you make before you jack out gets +1d.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "ICE Breaker",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Once per matrix run, you can spend Karma to disable a single ICE routine.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Firewall",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Once per matrix run, you can expend your special armor to prevent a consequence caused by an ICE routine.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Hardened Deck",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you roll to resist a consequence from a source within the matrix, you get +1d.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Search Optimization",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you make a study check or attempt to gather information in the Matrix, you can push yourself without paying stress.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Rep",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you appear in the Matrix with a recognizable avatar, you can roll Hack in place of any social skill.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Technomancer",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "You can access the Matrix without a cyberdeck, when you do, any damage your cyberdeck would take is inflicted on you instead. You can also see into the astral space by spending Karma when making an Attune check to use Hack instead.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Saboteur",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you make an alteration to a system within the Matrix, you can put it on a time delay. If you do, it cannot be noticed by casual inspection even on a partial success (this doesn’t prevent consequences.)",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Paydirt",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "When you are looking through data systems in the Matrix, you can make a Study check, to find pay dirt. This will increase the pay from the mission, the GM will determine how much during the payoff phase.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Veteran",
+    "permission": {
+        "default": 0
+    },
+    "type": "ability",
+    "system": {
+        "description": "Choose a special ability from another playbook. This may be taken 3 times.",
+        "Playbook": "Decker",
+        "price": "1"
+    },
+    "flags": {}
+}
+{
+    "name": "Fine cyberdeck",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Decker",
+        "load": "1",
+        "description": "A device used to access matrix systems"
+    },
+    "flags": {}
+}
+{
+    "name": "Software",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Decker",
+        "load": "0",
+        "description": "A piece of software that you can run in a computer system"
+    },
+    "flags": {}
+}
+{
+    "name": "RFID Tags",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Decker",
+        "load": "1",
+        "description": "Data chips that you can save data onto for exfiltration or infiltration."
+    },
+    "flags": {}
+}
+{
+    "name": "Wireless Transmitter",
+    "permission": {
+        "default": 0
+    },
+    "type": "item",
+    "system": {
+        "Playbook": "Decker",
+        "load": "2",
+        "description": "A device that sends or broadcasts a signal out from the location (can be encrypted or not)"
+    },
+    "flags": {}
+}
