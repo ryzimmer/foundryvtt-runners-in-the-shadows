@@ -282,6 +282,7 @@
                 <p><a class="item-add-popup" data-item-type="crew_upgrade"><i class="fas fa-plus-square"></i></a></p>
             </div>
             {{#each items as |item id|}}
+            {{#if eq item.type "crew_upgrade"}}
             <div class="item flex-horizontal" data-item-id="{{item._id}}">
                 <div class="item-body item-sheet-open flex-horizontal">
                     <b>
