@@ -5,6 +5,8 @@
         <img src="{{img}}" data-edit="img" title="{{name}}" height="100" width="100" />
 
         <div id="crew-{{_id}}-name-alias" class="crew-name-alias grow-two flex-column">
+            {{log this}}
+
             <div id="crew-{{_id}}-name-box" class="crew-name">
                 <label for="crew-{{_id}}-name">{{localize "rits.Name"}}</label>
                 <input type="text" id="crew-{{_id}}-name" name="name" value="{{name}}">
@@ -281,7 +283,6 @@
                 <p>{{localize "rits.CrewUpgrades"}}</p>
                 <p><a class="item-add-popup" data-item-type="crew_upgrade"><i class="fas fa-plus-square"></i></a></p>
             </div>
-            {{log this}}
             {{#each items as |item id|}}
             {{#if eq item.type "crew_upgrade"}}
             <div class="item flex-horizontal" data-item-id="{{item._id}}">
