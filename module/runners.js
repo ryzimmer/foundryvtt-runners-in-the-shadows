@@ -75,6 +75,10 @@ Hooks.once("init", async function () {
     return Array.prototype.slice.call(arguments, 0, arguments.length - 1).some(Boolean);
   });
 
+  Handlebars.registerHelper('pc', function( string ) {
+    return SaVHelpers.getProperCase( string );
+  });
+
   // Multiboxes.
   Handlebars.registerHelper('multiboxes', function (selected, options) {
 
@@ -315,3 +319,31 @@ Hooks.on("renderSceneControls", async (app, html) => {
   html.children().first().append(dice_roller);
 
 });
+
+//For Clocks UI
+// Hooks.once("init", () => {
+//   log(`Init ${game.data.system.id}`);
+// });
+
+// Hooks.on("getSceneControlButtons", async (controls) => {
+//   await ClockTiles.getSceneControlButtons(controls);
+// });
+
+// Hooks.on("renderTileHUD", async (hud, html, tile) => {
+//   await ClockTiles.renderTileHUD(hud, html, tile);
+// });
+
+// Hooks.on("renderTokenHUD", async (hud, html, token) => {
+//   let rootElement = document.getElementsByClassName('vtt game')[0];
+//   if( await ClockSheet.renderTokenHUD(hud, html, token) ) {
+//     rootElement.classList.add('hide-ui');
+//   } else {
+//     rootElement.classList.remove('hide-ui');
+//   }
+// });
+
+// Hooks.on("dropCanvasData", async (canvas, data) => {
+//   if( data.type === "Item" ){
+//     await SaVHelpers.createTile( canvas, data );
+//   }
+// });
