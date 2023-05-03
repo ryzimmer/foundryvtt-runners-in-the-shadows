@@ -15,10 +15,10 @@ export class RunnersHelpers {
     let should_be_distinct = distinct_types.includes(item_data.type);
     // If the Item has the exact same name - remove it from list.
     // Remove Duplicate items from the array.
-    actor.items.forEach( i => {
+    actor.items.forEach(i => {
       let has_double = (item_data.type === i.type);
-      if ( ( ( i.name === item_data.name ) || ( should_be_distinct && has_double ) ) && !( allowed_types.includes( item_data.type ) ) && ( item_data._id !== i.id ) ) {
-        dupe_list.push (i.id);
+      if (((i.name === item_data.name) || (should_be_distinct && has_double)) && !(allowed_types.includes(item_data.type)) && (item_data._id !== i.id)) {
+        dupe_list.push(i.id);
       }
     });
 
@@ -32,7 +32,7 @@ export class RunnersHelpers {
    */
   static getNestedProperty(obj, property) {
     return property.split('.').reduce((r, e) => {
-        return r[e];
+      return r[e];
     }, obj);
   }
 
@@ -65,14 +65,14 @@ export class RunnersHelpers {
     let game_items = [];
     let compendium_items = [];
 
-    game_items = game.items.filter(e => e.type === item_type).map(e => {return e.toObject()});
+    game_items = game.items.filter(e => e.type === item_type).map(e => { return e.toObject() });
 
     let pack = game.packs.find(e => e.metadata.name === item_type);
     let compendium_content = await pack.getDocuments();
-    compendium_items = compendium_content.map(e => {return e.toObject()});
+    compendium_items = compendium_content.map(e => { return e.toObject() });
 
     list_of_items = game_items.concat(compendium_items);
-    list_of_items.sort(function(a, b) {
+    list_of_items.sort(function (a, b) {
       let nameA = a.name.toUpperCase();
       let nameB = b.name.toUpperCase();
       return nameA.localeCompare(nameB);
@@ -90,18 +90,18 @@ export class RunnersHelpers {
    * @returns {string}
    */
   static getAttributeLabel(attribute_name) {
-        let attribute_labels = {};
-        const attributes = game.system.model.Actor.character.attributes;
+    let attribute_labels = {};
+    const attributes = game.system.model.Actor.character.attributes;
 
-        for (const att_name in attributes) {
-          attribute_labels[att_name] = attributes[att_name].label;
-          for (const skill_name in attributes[att_name].skills) {
-            attribute_labels[skill_name] = attributes[att_name].skills[skill_name].label;
-          }
+    for (const att_name in attributes) {
+      attribute_labels[att_name] = attributes[att_name].label;
+      for (const skill_name in attributes[att_name].skills) {
+        attribute_labels[skill_name] = attributes[att_name].skills[skill_name].label;
+      }
 
-        }
+    }
 
-        return attribute_labels[attribute_name];
+    return attribute_labels[attribute_name];
   }
 
   /**
@@ -111,9 +111,9 @@ export class RunnersHelpers {
    * @returns {Boolean}
    */
   static isAttributeAction(attribute_name) {
-        const attributes = game.system.model.Actor.character.attributes;
+    const attributes = game.system.model.Actor.character.attributes;
 
-        return !(attribute_name in attributes);
+    return !(attribute_name in attributes);
   }
 
   /* -------------------------------------------- */
@@ -130,15 +130,15 @@ export class RunnersHelpers {
    * @returns {string}
    *  html-formatted option string
    */
-  static createListOfClockSizes( sizes, default_size, current_size ) {
+  static createListOfClockSizes(sizes, default_size, current_size) {
 
     let text = ``;
 
-    sizes.forEach( size => {
+    sizes.forEach(size => {
       text += `<option value="${size}"`;
-      if ( !( current_size ) && ( size === default_size ) ) {
+      if (!(current_size) && (size === default_size)) {
         text += ` selected`;
-      } else if ( size === current_size ) {
+      } else if (size === current_size) {
         text += ` selected`;
       }
 
@@ -149,4 +149,7 @@ export class RunnersHelpers {
 
   }
 
+  static getProperCase(name) {
+    return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+  }
 }

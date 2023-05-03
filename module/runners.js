@@ -76,7 +76,7 @@ Hooks.once("init", async function () {
   });
 
   Handlebars.registerHelper('pc', function( string ) {
-    return SaVHelpers.getProperCase( string );
+    return RunnersHelpers.getProperCase( string );
   });
 
   // Multiboxes.
