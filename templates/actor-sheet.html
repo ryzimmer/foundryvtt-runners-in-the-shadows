@@ -156,12 +156,12 @@
         <div id="trauma-list">
             {{#each system.trauma.list}}
             <div class="tooltip">
-                <span class="tooltiptext bottom">{{localize (concat "rits.Trauma" (pc system.trauma.name)
+                <span class="tooltiptext bottom">{{localize (concat "rits.Trauma" (pc @key)
                     "Tip")}}</span>
                 <label>
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.{{system.trauma.name}}"
+                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.{{@key}}"
                         value="{{this}}" {{checked this}}>
-                    <span class="checkmark">{{localize (concat "rits.Trauma" (pc system.trauma.name) )}}</span>
+                    <span class="checkmark">{{localize (concat "rits.Trauma" (pc @key) )}}</span>
                 </label>
             </div>
             {{/each}}
