@@ -6,7 +6,7 @@
     "type": "ability",
     "system": {
         "description": "When you work on a clock with rig or hack, or when you study a schematic, fill +1 segment.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -19,7 +19,7 @@
     "type": "ability",
     "system": {
         "description": "When you spend Karma on a rig roll to repair or upgrade, treat the system you worked on as 1 quality higher for the remainder of the job.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -32,7 +32,7 @@
     "type": "ability",
     "system": {
         "description": "When you acquire parts or equipment during downtime, you may either gain two assets, or one asset at +1 quality.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -45,7 +45,7 @@
     "type": "ability",
     "system": {
         "description": "While onboard a vehicle you may damage a vehicle system you have access to in order to gain +1d or +1 effect to a roll.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -58,7 +58,7 @@
     "type": "ability",
     "system": {
         "description": "When you take this, choose a part of your body which has been replaced with cyberware and then choose a skill that your new cyberware can assist with. When you spend Karma on that action take +1 effect.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -71,7 +71,7 @@
     "type": "ability",
     "system": {
         "description": "When you push yourself, you may spend +1 stress (3 stress total) to gain both +1 effect and +1d instead of one or the other.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -84,7 +84,7 @@
     "type": "ability",
     "system": {
         "description": "When you indulge your vice, you may adjust the dice outcome by +/-2. An ally who joins you may do the same.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -97,7 +97,7 @@
     "type": "ability",
     "system": {
         "description": "When you spend Karma on a desperate roll, it counts as risky instead.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -110,7 +110,7 @@
     "type": "ability",
     "system": {
         "description": "You have sharp eyes and notice small details many might overlook. Gain +1d when using a vehicle’s weapons or making trick shots.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -123,7 +123,7 @@
     "type": "ability",
     "system": {
         "description": "Choose a special ability from another playbook. This may be taken 3 times.",
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "price": "1"
     },
     "flags": {}
@@ -135,7 +135,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "load": "1",
         "description": "If something is broken, this will probably fix it short term"
     },
@@ -148,7 +148,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "load": "1",
         "description": "A vehicle for traveling over land or water"
     },
@@ -161,7 +161,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "load": "1",
         "description": "A kit with all the tools needed to build, repair, or modify hardware."
     },
@@ -174,7 +174,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Rigger",
+        "playbook": "Rigger",
         "load": "1",
         "description": "Spare parts to use for building"
     },

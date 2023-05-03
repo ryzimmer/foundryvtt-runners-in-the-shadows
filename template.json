@@ -258,7 +258,7 @@
     "types": [
       "faction",
       "item",
-      "Playbook",
+      "playbook",
       "ability",
       "heritage",
       "background",

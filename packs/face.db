@@ -6,7 +6,7 @@
     "type": "ability",
     "system": {
         "description": "You get an extra downtime activity to acquire assets, reduce heat, or lay low.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -19,7 +19,7 @@
     "type": "ability",
     "system": {
         "description": "During downtime, you get +1 d when you acquire assets, reduce heat or lay low. Any time you gather info, take +1d.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -32,7 +32,7 @@
     "type": "ability",
     "system": {
         "description": "When you consort to gather info, you gain +1 effect and can in addition ask: \“Who might this benefit?\”",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -45,7 +45,7 @@
     "type": "ability",
     "system": {
         "description": "You may expend your special armor to resist a consequence of persuasion or suspicion. When you resist with insight, gain +1d.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -58,7 +58,7 @@
     "type": "ability",
     "system": {
         "description": "When you go to one of your contacts who you don’t have a negative relationship with for a job, they can find you one and you may choose one: <ul>it’s not deadly</ul><ul>it pays well enough</ul><ul>it’s not a rush job</ul><ul>it comes from a faction you trust</ul><ul>it targets an enemy you have.</ul>You may spend 1 Nuyen per additional feature.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -71,7 +71,7 @@
     "type": "ability",
     "system": {
         "description": "Whenever you lead a group action, gain +1 scale (for example, a small group counts as a medium group). If you lead a group action in combat, you may count multiple 6s from different rolls as a critical.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -84,7 +84,7 @@
     "type": "ability",
     "system": {
         "description": "When someone in your crew is incarcerated, your wanted level counts as 1 less, your Tier as 1 more, and you gain +1 faction status with a faction that you help while you’re inside, in addition to whatever you get from the incarceration roll.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -97,7 +97,7 @@
     "type": "ability",
     "system": {
         "description": "You gain +1d to Consort when you gather information on a target for a score. You get +1d to the engagement roll for that operation.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -110,7 +110,7 @@
     "type": "ability",
     "system": {
         "description": "When you provide meaningful insight or heartfelt advice that a crewmate follows, you both clear 1 stress.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -123,7 +123,7 @@
     "type": "ability",
     "system": {
         "description": "Choose a special ability from another playbook. This may be taken 3 times.",
-        "Playbook": "Face",
+        "playbook": "Face",
         "price": "1"
     },
     "flags": {}
@@ -135,7 +135,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Face",
+        "playbook": "Face",
         "load": "0",
         "description": "Paperwork, planted stories and rumors, and false relationships sufficient to pass as a different person."
     },
@@ -148,7 +148,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Face",
+        "playbook": "Face",
         "load": "1",
         "description": "A properly encoded ID indicating a legitimate position within a faction at your tier or lower"
     },
@@ -161,7 +161,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Face",
+        "playbook": "Face",
         "load": "0",
         "description": "Fine brandies, small but thoughtful gifts, spices and perfumes, fine instruments, popular games, etc. These can come in varied sizes. Each time you bring one of these on the job, explain what it is and why it’s luxurious. Can be taken multiple times but costs an extra 1 per use in a mission."
     },
@@ -174,7 +174,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Face",
+        "playbook": "Face",
         "load": "1",
         "description": "A folio of useful architectural drawings and city plans"
     },

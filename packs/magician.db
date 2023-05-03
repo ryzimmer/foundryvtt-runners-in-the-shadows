@@ -6,7 +6,7 @@
     "type": "ability",
     "system": {
         "description": "You have a spiritual companion that is skilled in certain areas. Pick 2 skills and when you push yourself on those skills, it only costs 1 stress instead of 2.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -19,7 +19,7 @@
     "type": "ability",
     "system": {
         "description": "When you engage in combat using spells instead of weapons, you can use cast instead of scrap.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -32,7 +32,7 @@
     "type": "ability",
     "system": {
         "description": "You have the ability to gather information by projecting your consciousness into the astral space. When you do this, you can use attune instead of study.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -45,7 +45,7 @@
     "type": "ability",
     "system": {
         "description": "You gain Meditation as a vice. When you indulge this vice, clear +1 stress and add Dark Visions as a possible overindulgence.<br.><i>Contemplation of the universe is not without its perils. When you choose Dark Visions as an overindulgence, you get a vision of a loved one, contact, or friend in great danger.</i>",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -58,7 +58,7 @@
     "type": "ability",
     "system": {
         "description": "You may expend your special armor to resist a supernatural consequence, or push yourself when casting a spell.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -71,7 +71,7 @@
     "type": "ability",
     "system": {
         "description": "Spend 1 stress to remotely view a distant place or person tied to you in some intimate way. Spend 1 stress for each extra feature:<ul>It lasts for a minute rather than a moment</ul><ul>Your target can also see and hear you<ul><ul>You may see something only familiar to you, not intimate</ul>",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -84,7 +84,7 @@
     "type": "ability",
     "system": {
         "description": "You may push yourself to attune to magically affect an area, causing harm to anyone in the area vulnerable to your assault. You may spend 1 stress for each additional feature:<ul>It damages instead of stuns<ul/><ul>You and anyone you choose get +2d to resist the effects</ul>",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -97,7 +97,7 @@
     "type": "ability",
     "system": {
         "description": "You can tear apart spells that are aimed at you. When you resist a spell with magic, you get +1d.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -110,7 +110,7 @@
     "type": "ability",
     "system": {
         "description": "You can use cast or ritual instead of first-aid when healing someone during downtime. You also do not need to spend stress to heal yourself as a downtime action.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -123,7 +123,7 @@
     "type": "ability",
     "system": {
         "description": "Choose a special ability from another playbook. This may be taken 3 times.",
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "price": "1"
     },
     "flags": {}
@@ -135,7 +135,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "load": "0",
         "description": "An item you can use to channel your powers"
     },
@@ -148,7 +148,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "load": "1",
         "description": "Something to help you meditate or access the astral space. Maybe useful for a bribe"
     },
@@ -161,7 +161,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "load": "1",
         "description": "Sticks to sustained magic. Mainly used to detect astral entities"
     },
@@ -174,7 +174,7 @@
     },
     "type": "item",
     "system": {
-        "Playbook": "Magician",
+        "playbook": "Magician",
         "load": "1",
         "description": "A spray that can detect magic. Orichalcum glows gold, other magic or enchanted items glow violet when sprayed"
     },
