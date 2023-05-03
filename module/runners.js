@@ -35,6 +35,8 @@ Hooks.once("init", async function () {
     sizes: [4, 6, 8]
   };
 
+  game.system.traumas = [ "cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious" ];
+
   CONFIG.Item.documentClass = RunnersItem;
   CONFIG.Actor.documentClass = RunnersActor;
   CONFIG.ActiveEffect.documentClass = RunnersActiveEffect;
@@ -108,21 +110,21 @@ Hooks.once("init", async function () {
   });
 
   // Trauma Counter
-  Handlebars.registerHelper('traumacounter', function (selected, options) {
+  Handlebars.registerHelper('traumacounter', function(selected, max, options) {
 
     let html = options.fn(this);
 
-    var count = 0;
+    let count = 0;
     for (const trauma in selected) {
       if (selected[trauma] === true) {
         count++;
       }
     }
 
-    if (count > 4) count = 4;
+    if (count > max) count = max;
 
     const rgx = new RegExp(' value=\"' + count + '\"');
-    return html.replace(rgx, "$& checked");
+    return html.replace(rgx, "$& checked=\"checked\"");
 
   });
 
