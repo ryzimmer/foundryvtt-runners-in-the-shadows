@@ -118,8 +118,8 @@
     </section>
 
     {{!-- Stress and Trauma --}}
-    <div id="stress-trauma" class="section big-teeth-section">
-        <div id="character-{{_id}}-stress" class="big-teeth">
+    <div id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
+        <div id="character-{{_id}}-stress" class="big-teeth character-stress">
             {{#multiboxes system.stress.value}}
             <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
             <div id="stress-vice">
@@ -140,7 +140,7 @@
             <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
                 <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize
                     system.trauma.name}}</label>
-                <div id="trauma-teeth" class="small-teeth">
+                <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
                     <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0"
                         data-dtype="Number">
                     {{#times_from_1 system.trauma.max}}
