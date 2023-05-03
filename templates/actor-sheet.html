@@ -137,7 +137,7 @@
             {{#traumacounter system.trauma.list}}
             <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
                 <div class="tooltip">
-                    <span class="tooltiptext bottom">{{localize (concat "rits.Trauma" (pc @key) "Tip")}}</span>
+                    <span class="tooltiptext bottom">{{localize (concat "rits.Trauma" (pc system.trauma.name) "Tip")}}</span>
                     <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize
                         system.trauma.name}}</label>
                     <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
