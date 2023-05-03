@@ -86,9 +86,9 @@
                             <div class="tooltip">
                                 <a class="item-name">{{item.name}}</a>
                                 <span class="tooltiptext">{{{item.system.description}}}<br />{{localize
-                                    "BITD.ClassExpClueDescription"}}<br />{{localize
-                                    "BITD.ClassExpClue2"}}<br />{{localize
-                                    "BITD.ClassExpClue3"}}<br />{{item.system.experience_clues}}</span>
+                                    "rits.ClassExpClueDescription"}}<br />{{localize
+                                    "rits.ClassExpClue2"}}<br />{{localize
+                                    "rits.ClassExpClue3"}}<br />{{item.system.experience_clues}}</span>
                             </div>
                         </div>
                         <a class="item-control item-delete" title="{{localize 'rits.TitleDeleteItem'}}"><i
@@ -118,30 +118,31 @@
     </section>
 
     {{!-- Stress and Trauma --}}
-    <div id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
-        <div id="character-{{_id}}-stress" class="big-teeth character-stress">
+    <div id="stress-trauma" class="section big-teeth-section">
+        <div id="character-{{_id}}-stress" class="big-teeth">
             {{#multiboxes system.stress.value}}
-
             <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0" dtype="Radio">
-            <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
-
+            <div id="stress-vice">
+                <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
+                <span class="black-label roll-die-attribute rollable-text" data-roll-attribute="vice">{{localize
+                    "rits.Vice"}}</span>
+            </div>
             {{#times_from_1 system.stress.max}}
             <input type="radio" id="character-{{../_id}}-stress-{{this}}" name="system.stress.value" value="{{this}}"
                 dtype="Radio">
             <label for="character-{{../_id}}-stress-{{this}}"></label>
             {{/times_from_1}}
-
             {{/multiboxes}}
-
         </div>
+
         <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
-            {{#traumacounter system.trauma.list}}
+            {{#traumacounter system.trauma.list system.trauma.max}}
             <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
                 <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize
                     system.trauma.name}}</label>
-                <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
-                    <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
-
+                <div id="trauma-teeth" class="small-teeth">
+                    <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0"
+                        data-dtype="Number">
                     {{#times_from_1 system.trauma.max}}
                     <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value"
                         value="{{this}}" disabled>
@@ -152,75 +153,19 @@
             {{/traumacounter}}
         </div>
 
-
-        <div id="character-{{_id}}-trauma-list" class="trauma-list">
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.cold" value="cold" {{checked
-                        system.trauma.list.cold}}>
-                    <span class="checkmark">{{localize "rits.TraumaCold"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaColdTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.haunted" value="haunted"
-                        {{checked system.trauma.list.haunted}}>
-                    <span class="checkmark">{{localize "rits.TraumaHaunted"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaHauntedTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.obsessed" value="obsessed"
-                        {{checked system.trauma.list.obsessed}}>
-                    <span class="checkmark">{{localize "rits.TraumaObsessed"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaObsessedTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.paranoid" value="paranoid"
-                        {{checked system.trauma.list.paranoid}}>
-                    <span class="checkmark">{{localize "rits.TraumaParanoid"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaParanoidTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.reckless" value="reckless"
-                        {{checked system.trauma.list.reckless}}>
-                    <span class="checkmark">{{localize "rits.TraumaReckless"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaRecklessTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.soft" value="soft" {{checked
-                        system.trauma.list.soft}}>
-                    <span class="checkmark">{{localize "rits.TraumaSoft"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaSoftTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.unstable" value="unstable"
-                        {{checked system.trauma.list.unstable}}>
-                    <span class="checkmark">{{localize "rits.TraumaUnstable"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaUnstableTip"}}</span>
-                </div>
-            </label>
-            <label>
-                <div class="tooltip">
-                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.vicious" value="vicious"
-                        {{checked system.trauma.list.vicious}}>
-                    <span class="checkmark">{{localize "rits.TraumaVicious"}}</span>
-                    <span class="tooltiptext">{{localize "rits.TraumaViciousTip"}}</span>
-                </div>
-            </label>
+        <div id="trauma-list">
+            {{#each system.trauma.list}}
+            <div class="tooltip">
+                <span class="tooltiptext bottom">{{localize (concat "rits.Trauma" (pc system.trauma.name)
+                    "Tip")}}</span>
+                <label>
+                    <input type="checkbox" data-dType="Boolean" name="system.trauma.list.{{system.trauma.name}}"
+                        value="{{this}}" {{checked this}}>
+                    <span class="checkmark">{{localize (concat "rits.Trauma" (pc system.trauma.name) )}}</span>
+                </label>
+            </div>
+            {{/each}}
         </div>
-
-    </div>
     </div>
 
     {{!-- Harm, Healing and Armor --}}
@@ -398,7 +343,7 @@
             {{!-- Friends Tab --}}
             <div id="friends" class="tab flex-vertical" data-tab="friends">
                 <div class="label-stripe">
-                    <p>{{localize "BITD.Friends"}}
+                    <p>{{localize "rits.Friends"}}
                         <a class="item-add-popup" data-item-type="friend"><i class="fas fa-plus-square"></i></a>
                     </p>
                 </div>
