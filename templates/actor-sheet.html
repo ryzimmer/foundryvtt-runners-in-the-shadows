@@ -263,10 +263,11 @@
                         <a class="item-add-popup" data-item-type="ability" data-limiter="{{system.character_class}}"><i
                                 class="fas fa-plus-square"></i></a>
                     </p>
-                    <div id="character-experience" class="teeth-experience tooltip">
+                    <div class="tooltip">
                         <label for="character-{{_id}}-experience-0">{{localize "rits.PExperience"}}<i
                                 class="fab fa-creative-commons-zero nullifier"></i>
-                            <span class="tooltiptext left">{{localize "rits.PlaybookExpClueDescription"}}<br />{{localize
+                            <span class="tooltiptext left">{{localize
+                                "rits.PlaybookExpClueDescription"}}<br />{{localize
                                 "rits.PlaybookExpClue2"}}<br />{{localize "rits.PlaybookExpClue3"}}<br />
                                 {{#each items as |item|}}
                                 {{#if (eq item.type "playbook")}}
@@ -275,6 +276,8 @@
                                 {{/each}}
                             </span>
                         </label>
+                    </div>
+                    <div id="character-experience" class="teeth-experience">
                         {{#multiboxes system.experience}}
                         <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0"
                             dtype="Radio">
