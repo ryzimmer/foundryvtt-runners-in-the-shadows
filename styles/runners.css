@@ -1261,6 +1261,10 @@
   background-image: url("assets/teeth/stresstooth-halfgrey.png");
 }
 
+.runners-in-the-shadows.crew.sheet .big-teeth-section .big-teeth input[disabled] {
+  background-image: url("assets/teeth/stresstooth-blue.png");
+}
+
 .runners-in-the-shadows.crew.sheet .big-teeth-section .big-teeth input:checked+label {
   background-image: url("assets/teeth/stresstooth-red.png");
 }
@@ -1608,38 +1612,6 @@
   margin-right: 5px;
   transition: filter 0.1s;
   cursor: pointer;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience label:last-of-type {
-  margin-right: 0px;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience label[for$="-0"] {
-  width: auto;
-  height: auto;
-  background-image: none !important;
-  color: #EEEFFF;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience label[for$="-0"] i {
-  margin-top: 4px;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience label:hover {
-  filter: brightness(0.8);
-  opacity: 0.9;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience input {
-  display: none;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience input:checked~label {
-  background-image: url("assets/teeth/stresstooth-halfgrey.png");
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience input:checked+label {
-  background-image: url("assets/teeth/stresstooth-red.png");
 }
 
 .runners-in-the-shadows.actor.pc * .harm-armor {
@@ -2187,6 +2159,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
 * .big-teeth-section #trauma-list label {
   cursor: pointer;
   font-size: 19px;
@@ -2199,16 +2172,20 @@
   cursor: pointer;
   /* Hide the browser's default checkbox */
 }
+
 * .big-teeth-section #trauma-list label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
+
 * .big-teeth-section #trauma-list label input {
   display: none;
 }
-* .big-teeth-section #trauma-list label input:checked ~ .checkmark {
+
+* .big-teeth-section #trauma-list label input:checked~.checkmark {
   color: red;
 }
+
 * .big-teeth-section #trauma-list label .checkmark {
   text-decoration: none;
   font-weight: bold;
@@ -2221,4 +2198,198 @@
   margin-bottom: 0px;
   /* Trauma */
 }
+
+* section.experience {
+  margin-bottom: 0px;
+  justify-content: center;
+}
+
+* .teeth-experience-red {
+  display: flex;
+  /* Hide the browser's default checkbox */
+  position: float;
+  top: 0px;
+  right: 10px;
+}
+
+* .teeth-experience-faction {
+  display: flex;
+  /* Hide the browser's default checkbox */
+  position: float !important;
+  top: 0px;
+  right: 10px;
+}
+
+* .teeth-experience-faction label {
+  height: 30px;
+  width: 10px;
+  background-image: url("assets/teeth/stresstooth-blue.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+
+* .teeth-experience-faction label:last-of-type {
+  margin-right: 0px;
+}
+
+* .teeth-experience-faction label[for$="-0"] {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+
+* .teeth-experience-faction label[for$="-0"] i {
+  margin-top: 4px;
+}
+
+* .teeth-experience-faction label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+
+* .teeth-experience-faction input {
+  display: none;
+}
+
+* .teeth-experience-faction input+label {
+  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-7"] {
+  background-image: url("assets/teeth/stresstooth-blue.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-6"] {
+  background-image: url("assets/teeth/stresstooth-6.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-5"] {
+  background-image: url("assets/teeth/stresstooth-5.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-4"] {
+  background-image: url("assets/teeth/stresstooth-4.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-3"] {
+  background-image: url("assets/teeth/stresstooth-3.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-2"] {
+  background-image: url("assets/teeth/stresstooth-2.png");
+}
+
+* .teeth-experience-faction input:checked+label[for$="-1"] {
+  background-image: url("assets/teeth/stresstooth-red.png");
+}
+
+* .teeth-experience {
+  display: flex;
+  /* Hide the browser's default checkbox */
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+
+* .teeth-experience label {
+  height: 30px;
+  width: 10px;
+  background-image: url("assets/teeth/stresstooth-blue.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+
+* .teeth-experience-red label {
+  height: 30px;
+  width: 10px;
+  background-image: url("assets/teeth/stresstooth-red.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+
+* .teeth-experience-red span {
+  margin-right: 5px;
+  padding-top: 5px;
+}
+
+* .teeth-experience-red span.hover {
+  transition: filter 0.1s;
+  cursor: pointer;
+}
+
+* .teeth-experience-red span.hover:hover {
+  color: red;
+}
+
+* .teeth-experience-red label:last-of-type,
+* .teeth-experience label:last-of-type {
+  margin-right: 0px;
+}
+
+* .teeth-experience-red label[for$="-0"],
+* .teeth-experience label[for$="-0"] {
+  width: auto;
+  height: auto;
+  padding-top: 4px;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+
+* .teeth-experience-red label[for$="-0"]:hover,
+* .teeth-experience label[for$="-0"]:hover {
+  color: red;
+}
+
+* .teeth-experience-red label[for$="-0"] i,
+* .teeth-experience label[for$="-0"] i {
+  margin-top: 4px;
+}
+
+* .teeth-experience-red label:hover,
+* .teeth-experience label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+
+* .teeth-experience-red input,
+* .teeth-experience input {
+  display: none;
+}
+
+* .teeth-experience-red input:checked~label,
+* .teeth-experience input:checked~label {
+  background-image: url("assets/teeth/stresstooth-halfgrey.png");
+}
+
+* .teeth-experience-red input:checked+label {
+  background-image: url("assets/teeth/stresstooth-red.png");
+}
+
+* .teeth-experience input:checked+label {
+  background-image: url("assets/teeth/stresstooth-blue.png");
+}
+
+* .experience-clues-container {
+  width: 340px;
+  font-size: 12px;
+}
+
+* .experience-clues-container .experience-clues-description {
+  font-weight: bold;
+}
+
+* .experience-clues-container .experience-clues {
+  font-style: italic;
+}
+
 /*# sourceMappingURL=runners.css.map */
