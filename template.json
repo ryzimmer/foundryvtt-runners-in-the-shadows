@@ -16,6 +16,7 @@
       "vice": "",
       "vice-purveyor": "",
       "playbook": "",
+      "experienceMax": 8,
       "acquaintances": [],
       "acquaintances_label": "rits.Acquaintances",
       "stress": {
@@ -374,6 +375,7 @@
         "logic",
         "activatedEffect"
       ],
+      "experienceMax": 8,
       "experience_clues": [],
       "base_skills": {
         "artifice": [
