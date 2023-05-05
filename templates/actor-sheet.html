@@ -263,9 +263,10 @@
                         <a class="item-add-popup" data-item-type="ability" data-limiter="{{system.character_class}}"><i
                                 class="fas fa-plus-square"></i></a>
                     </p>
-                    <div class="tooltip">
-                        <label for="character-{{_id}}-experience-0">{{localize "rits.PExperience"}}<i
-                                class="fab fa-creative-commons-zero nullifier"></i>
+                    {{!-- Character Xp --}}
+                    <div id="character-experience" class="teeth-experience tooltip">
+                        <label for="character-{{_id}}-experience-0">{{localize "rits.PExperience"}}
+                            <i class="fab fa-creative-commons-zero nullifier"></i>
                             <span class="tooltiptext left">{{localize
                                 "rits.PlaybookExpClueDescription"}}<br />{{localize
                                 "rits.PlaybookExpClue2"}}<br />{{localize "rits.PlaybookExpClue3"}}<br />
@@ -276,16 +277,9 @@
                                 {{/each}}
                             </span>
                         </label>
-                    </div>
-                    <div id="character-experience" class="teeth-experience">
                         {{#multiboxes system.experience}}
-                        <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0"
-                            dtype="Radio">
-                        {{#times_from_1 system.experienceMax}}
-                        <input type="radio" id="character-{{../_id}}-experience-{{this}}" name="system.experience"
-                            value="{{this}}" dtype="Radio">
-                        <label for="character-{{../_id}}-experience-{{this}}"></label>
-                        {{/times_from_1}}
+                        <input type="radio" id="character-{{_id}}-experience-0" name="system.experience" value="0" dtype="Radio">
+                        {{#character_experience _id}}{{/character_experience}}
                         {{/multiboxes}}
                     </div>
                 </div>
