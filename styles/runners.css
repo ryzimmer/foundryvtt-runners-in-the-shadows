@@ -1595,25 +1595,6 @@
   margin-left: 10px;
 }
 
-.runners-in-the-shadows.actor.pc * .teeth-experience {
-  display: flex;
-  /* Hide the browser's default checkbox */
-  position: absolute;
-  top: 0px;
-  right: 10px;
-}
-
-.runners-in-the-shadows.actor.pc * .teeth-experience label {
-  height: 30px;
-  width: 10px;
-  background-image: url("assets/teeth/stresstooth-red.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: 5px;
-  transition: filter 0.1s;
-  cursor: pointer;
-}
-
 .runners-in-the-shadows.actor.pc * .harm-armor {
   display: flex;
 }
