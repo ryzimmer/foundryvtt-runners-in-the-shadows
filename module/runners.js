@@ -166,7 +166,7 @@ Hooks.once("init", async function () {
     let html = options.fn(this);
     for (let i = 1; i <= 10; i++) {
 
-      html += `<input type="radio" id="crew-${_id}-experience-${i}" data-dType="Number" name="system.experience" value="${i}" dtype="Radio"><label for="character-${_id}-experience-${i}"></label>`;
+      html += `<input type="radio" id="crew-${_id}-experience-${i}" data-dType="Number" name="system.experience" value="${i}" dtype="Radio"><label for="crew-${_id}-experience-${i}"></label>`;
     }
 
     return html;
@@ -177,7 +177,7 @@ Hooks.once("init", async function () {
     let html = options.fn(this);
     for (let i = 1; i <= 8; i++) {
 
-      html += `<input type="radio" id="character-${_id}-experience-${i}" data-dType="Number" name="system.experience" value="${i}" dtype="Radio"><label for="crew-${_id}-experience-${i}"></label>`;
+      html += `<input type="radio" id="character-${_id}-experience-${i}" data-dType="Number" name="system.experience" value="${i}" dtype="Radio"><label for="character-${_id}-experience-${i}"></label>`;
     }
 
     return html;
